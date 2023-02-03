@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="790.0" prefWidth="750.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="client.controllers.SettingsController">
+   <Label layoutX="57.0" layoutY="51.0" prefHeight="58.0" prefWidth="434.0" text="Settings">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Label>
+   <Label layoutX="67.0" layoutY="163.0" text="Server URL">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <TextField fx:id="serverUrlTextField" layoutX="193.0" layoutY="162.0" prefHeight="33.0" prefWidth="319.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Button defaultButton="true" layoutX="389.0" layoutY="352.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Save">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Button layoutX="298.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Label fx:id="messageLabel" layoutX="67.0" layoutY="251.0" prefHeight="27.0" prefWidth="559.0" text="Settings update has been saved successfully." textFill="#2000a1">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+</AnchorPane>

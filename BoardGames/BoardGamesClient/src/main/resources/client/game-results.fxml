@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="740.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="client.controllers.GameResultsController">
+    <Label layoutX="37.0" layoutY="78.0" prefHeight="35.0" prefWidth="513.0" text="Your game results:">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Label>
+    <Button layoutX="622.0" layoutY="708.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back">
+        <font>
+          <Font size="15.0" />
+        </font>
+    </Button>
+    <TableView fx:id="gameResultsTable" layoutX="37.0" layoutY="130.0" prefHeight="609.0" prefWidth="501.0">
+      <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="106.0" text="Date" />
+          <TableColumn fx:id="timeColumn" prefWidth="121.0" text="Time" />
+          <TableColumn fx:id="resultColumn" prefWidth="111.0" text="Game Result" />
+          <TableColumn fx:id="opponentNameColumn" prefWidth="162.0" text="Opponent name" />
+      </columns>
+    </TableView>
+    <Label fx:id="gameNameLabel" layoutX="37.0" layoutY="28.0" prefHeight="17.0" prefWidth="361.0" textFill="#2600ff">
+        <font>
+          <Font name="Berlin Sans FB" size="36.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="386.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../user.png"/>
+    </ImageView>
+   <Label fx:id="displayNameLabel" layoutX="457.0" layoutY="28.0" prefHeight="64.0" prefWidth="261.0">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+</AnchorPane>

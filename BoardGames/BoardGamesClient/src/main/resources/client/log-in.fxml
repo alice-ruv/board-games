@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="720.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="client.controllers.LogInController">
+   <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="260.0" style="-fx-background-color: #d3d3d3;">
+      <ImageView fitHeight="240.0" fitWidth="246.0" layoutX="4.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../Battleship.png" />
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="205.0" layoutX="27.0" layoutY="382.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../connect4.png" />
+      </ImageView>
+      <Label layoutX="28.0" layoutY="40.0" text="Not a member yet?">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button fx:id="signUpButton" layoutX="64.0" layoutY="75.0" mnemonicParsing="false" onAction="#signUpButtonPressed" prefHeight="51.0" prefWidth="133.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#0d19ff" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="39.0" fitWidth="34.0" layoutX="53.0" layoutY="654.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../settings.png" />
+      </ImageView>
+      <Button layoutX="14.0" layoutY="642.0" mnemonicParsing="false" onAction="#settingsButtonPressed" prefHeight="58.0" prefWidth="254.0" style="-fx-background-color: rgba(0,0,0,0); -fx-cursor: hand;" text="Settings" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+   </AnchorPane>
+   <AnchorPane prefHeight="760.0" prefWidth="740.0">
+      <ImageView fitHeight="64.0" fitWidth="103.0" layoutX="186.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../lock.png" />
+      </ImageView>
+      <Label layoutX="38.0" layoutY="31.0" prefHeight="92.0" prefWidth="385.0" text="Welcome to the board game server!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="52.0" layoutY="427.0" text="Username">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="517.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="160.0" layoutY="420.0" prefHeight="44.0" prefWidth="246.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="160.0" layoutY="510.0" prefHeight="44.0" prefWidth="246.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="logInButton" layoutX="175.0" layoutY="601.0" mnemonicParsing="false" onAction="#logInButtonPressed" text="Log in">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Label fx:id="messageForUserLabel" layoutX="30.0" layoutY="227.0" prefHeight="148.0" prefWidth="401.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+</HBox>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="760.0" prefWidth="740.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="client.controllers.GameInstructionsController">
+   <ImageView fx:id="gameImg" fitHeight="171.0" fitWidth="182.0" layoutX="263.0" layoutY="486.0" pickOnBounds="true"
+              preserveRatio="true"/>
+   <Label fx:id="titleLabel" layoutX="42.0" layoutY="23.0" prefHeight="39.0" prefWidth="490.0">
+      <font>
+         <Font size="28.0"/>
+      </font>
+   </Label>
+   <Button layoutX="636.0" layoutY="693.0" mnemonicParsing="false" onAction="#backButtonPressed"
+           text="Back">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Button>
+   <Text fx:id="instructionsText" layoutX="42.0" layoutY="94.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0"
+         wrappingWidth="635.13671875">
+      <font>
+         <Font size="16.0"/>
+      </font>
+   </Text>
+</AnchorPane>

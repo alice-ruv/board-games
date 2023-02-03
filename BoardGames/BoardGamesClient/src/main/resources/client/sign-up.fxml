@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="740.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="client.controllers.SignUpController">
+   <AnchorPane minWidth="-Infinity" prefHeight="760.0" prefWidth="260.0" style="-fx-background-color: #d3d3d3;">
+      <ImageView fitHeight="249.0" fitWidth="247.0" layoutX="7.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../Battleship.png" />
+      </ImageView>
+      <Label layoutX="27.0" layoutY="35.0" text="Already a member?">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button layoutX="70.0" layoutY="70.0" mnemonicParsing="false" onAction="#logInButtonPressed" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Log in!" textFill="#0011ff" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button layoutX="7.0" layoutY="645.0" mnemonicParsing="false" onAction="#settingsButtonPressed" prefHeight="58.0" prefWidth="260.0" style="-fx-background-color: rgba(0,0,0,0); -fx-cursor: hand;" text="Settings" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="39.0" fitWidth="34.0" layoutX="53.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../settings.png" />
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="218.0" layoutX="29.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../connect4.png" />
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane maxHeight="-Infinity" prefHeight="760.0" prefWidth="486.0">
+      <ImageView fitHeight="64.0" fitWidth="78.0" layoutX="187.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../lock.png" />
+      </ImageView>
+      <Label layoutX="38.0" layoutY="14.0" prefHeight="92.0" prefWidth="385.0" text="Welcome to the board game server!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="41.0" layoutY="344.0" text="Username">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Label layoutX="44.0" layoutY="468.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="176.0" layoutY="339.0" prefHeight="39.0" prefWidth="247.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" layoutX="176.0" layoutY="463.0" prefHeight="39.0" prefWidth="247.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="wrongInputLabel" layoutX="35.0" layoutY="184.0" prefHeight="100.0" prefWidth="432.0" textFill="RED">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="596.0" text="Display name">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="displayNameField" layoutX="176.0" layoutY="591.0" prefHeight="39.0" prefWidth="247.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="submitButton" layoutX="185.0" layoutY="673.0" mnemonicParsing="false" onAction="#submitButtonPressed" text="Submit">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="usernameConstraintsLabel" layoutX="38.0" layoutY="295.0" prefHeight="39.0" prefWidth="426.0" textFill="#000000cc" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordConstraintsLabel" layoutX="38.0" layoutY="417.0" prefHeight="39.0" prefWidth="426.0" textFill="#000000cc">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayNameConstraintsLabel" layoutX="38.0" layoutY="546.0" prefHeight="39.0" prefWidth="426.0" textFill="#000000cb" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+</HBox>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BoardGamesServer:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c67cfd6f-f475-4bb1-9812-77272dc597c8" name="Changes" comment="removed fxml warnings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EJEsrHxtO5muFNoL9xDWnyv3IP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8 (2)",
+    "last_opened_file_path": "C:/",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.14744526",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\finalProject\BoardGames\BoardGamesClient" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\finalProject\BoardGames\BoardGamesClient\src\main\resources\client" />
+      <recent name="C:\finalProject\BoardGames\BoardGamesClient\src\main\resources" />
+      <recent name="C:\finalProject\BoardGames\BoardGamesClient\src\main\resources\fxmls" />
+      <recent name="C:\finalProject\BoardGames\BoardGamesClient\src\main\java" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="common.gameboard.BattleshipUserBoard" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="client" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ClientApp">
+    <configuration name="ClientApp" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="client.MainClientApplication" />
+      <module name="BoardGamesClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApp" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.1" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="BoardGamesServer:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BoardGamesServer:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="ClientJavaFXApp" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/clientJavaFXApp/BoardGamesClient.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\finalProject\BoardGames" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="clientJavaFXApp" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/clientJavaFXApp/BoardGamesClient.jar" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration name="boardGamesClient" type="JarApplication" singleton="false">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/BoardGamesClient_jar/BoardGamesClient.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\finalProject\BoardGames" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ClientApp" />
+      <item itemvalue="GlassFish Server.ServerApp" />
+      <item itemvalue="JAR Application.boardGamesClient" />
+      <item itemvalue="JAR Application.ClientJavaFXApp" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c67cfd6f-f475-4bb1-9812-77272dc597c8" name="Changes" comment="" />
+      <created>1662305498898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662305498898</updated>
+      <workItem from="1662305500493" duration="9441000" />
+      <workItem from="1662315079485" duration="32000" />
+      <workItem from="1662315132315" duration="143510000" />
+      <workItem from="1662818211822" duration="1473000" />
+      <workItem from="1662912117265" duration="105997000" />
+      <workItem from="1663243471753" duration="126586000" />
+      <workItem from="1663603370801" duration="54000" />
+      <workItem from="1663603718470" duration="4176000" />
+      <workItem from="1663659712057" duration="94283000" />
+    </task>
+    <task id="LOCAL-00005" summary="fun">
+      <created>1662555675601</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662555675601</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fun">
+      <created>1662573875699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662573875700</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fun">
+      <created>1662627093459</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662627093459</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fun">
+      <created>1662629050005</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662629050005</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fun">
+      <created>1662633484420</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662633484421</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fun">
+      <created>1662813402914</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662813402914</updated>
+    </task>
+    <task id="LOCAL-00011" summary="capara">
+      <created>1662828666529</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662828666529</updated>
+    </task>
+    <task id="LOCAL-00012" summary="capara">
+      <created>1662901431749</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662901431749</updated>
+    </task>
+    <task id="LOCAL-00013" summary="capara">
+      <created>1662904507379</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662904507379</updated>
+    </task>
+    <task id="LOCAL-00014" summary="capara">
+      <created>1662904970513</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1662904970513</updated>
+    </task>
+    <task id="LOCAL-00015" summary="capara">
+      <created>1662910006636</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1662910006636</updated>
+    </task>
+    <task id="LOCAL-00016" summary="capara">
+      <created>1662910036276</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1662910036276</updated>
+    </task>
+    <task id="LOCAL-00017" summary="capara">
+      <created>1662910893916</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1662910893916</updated>
+    </task>
+    <task id="LOCAL-00018" summary="capara">
+      <created>1662910929741</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1662910929741</updated>
+    </task>
+    <task id="LOCAL-00019" summary="capara">
+      <created>1662981243726</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1662981243726</updated>
+    </task>
+    <task id="LOCAL-00020" summary="capara">
+      <created>1663056670348</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663056670348</updated>
+    </task>
+    <task id="LOCAL-00021" summary="capara">
+      <created>1663328136519</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1663328136519</updated>
+    </task>
+    <task id="LOCAL-00022" summary="removed logs">
+      <created>1663328292403</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663328292403</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixes">
+      <created>1663344147230</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1663344147230</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fixed warnings">
+      <created>1663345129880</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1663345129880</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fixed warnings">
+      <created>1663346317355</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1663346317355</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fixed warnings">
+      <created>1663404483766</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1663404483766</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixed warnings">
+      <created>1663404519564</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663404519564</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixed warnings">
+      <created>1663404732150</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1663404732150</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fixed warnings">
+      <created>1663409485797</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1663409485797</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fixed warnings">
+      <created>1663409500429</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1663409500429</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fixed warnings">
+      <created>1663410074672</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663410074672</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fixed warnings">
+      <created>1663412359699</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663412359699</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fixed warnings">
+      <created>1663412816607</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1663412816607</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed warnings">
+      <created>1663413126414</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1663413126414</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fixed warnings">
+      <created>1663413623352</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1663413623352</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixed warnings">
+      <created>1663415599163</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663415599163</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixed warnings">
+      <created>1663419209836</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1663419209836</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed warnings">
+      <created>1663419326393</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1663419326393</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixed warnings">
+      <created>1663419349331</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1663419349331</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fixed warnings">
+      <created>1663419366327</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1663419366327</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fixed warnings">
+      <created>1663419376801</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663419376801</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fixed warnings">
+      <created>1663432431073</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1663432431073</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed warnings">
+      <created>1663523201900</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1663523201900</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fixed warnings">
+      <created>1663523211153</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1663523211153</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fixed warnings">
+      <created>1663593990521</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1663593990521</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fixed warnings">
+      <created>1663606270891</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1663606270891</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fixed warnings">
+      <created>1663769413208</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1663769413208</updated>
+    </task>
+    <task id="LOCAL-00048" summary="removed IGameMessageHandler">
+      <created>1663774328563</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1663774328563</updated>
+    </task>
+    <task id="LOCAL-00049" summary="removed IGameMessageHandler">
+      <created>1663843850092</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1663843850092</updated>
+    </task>
+    <task id="LOCAL-00050" summary="removed IGameMessageHandler">
+      <created>1664006454817</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1664006454819</updated>
+    </task>
+    <task id="LOCAL-00051" summary="removed IGameMessageHandler">
+      <created>1664020478768</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1664020478768</updated>
+    </task>
+    <task id="LOCAL-00052" summary="removed IGameMessageHandler">
+      <created>1664020741318</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1664020741319</updated>
+    </task>
+    <task id="LOCAL-00053" summary="removed fxml warnings">
+      <created>1664021636007</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1664021636007</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fun" />
+    <MESSAGE value="capara" />
+    <MESSAGE value="removed logs" />
+    <MESSAGE value="fixes" />
+    <MESSAGE value="fixed warnings" />
+    <MESSAGE value="removed IGameMessageHandler" />
+    <MESSAGE value="removed fxml warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed fxml warnings" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/AbstractMethodError.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/AbstractMethodError.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/ClientUserManager.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/ClientContext.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/GameNetworkManager.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java</url>
+          <line>359</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/ClientGameManager.java</url>
+          <line>424</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/BattleshipController.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/BattleshipController.java</url>
+          <line>295</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesClient/src/main/java/client/controllers/GameBaseController.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/common/SignUpRequest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardGamesServer/src/main/java/com/example/boardgamesserver/UserApi.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/common/src/main/java/common/SignUpRequest.java</url>
+          <line>17</line>
+          <properties class="common.SignUpRequest" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.glassfish.json.JsonGeneratorImpl" memberName="stack" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
