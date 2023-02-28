@@ -1,4 +1,5 @@
 package common;
+
 public class UserInGame
 {
     private final int userId;
@@ -17,9 +18,16 @@ public class UserInGame
     public int getUserId() {
         return userId;
     }
-    public String getDisplayName() {return displayName;}
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
     public int getGameId() {
         return gameId;
     }
-    public boolean isReady() {return isReady;}
+    
+    public boolean isReady() {
+        return isReady;
+    }
 }
