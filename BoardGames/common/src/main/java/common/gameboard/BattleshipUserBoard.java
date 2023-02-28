@@ -41,6 +41,7 @@ public class BattleshipUserBoard implements Serializable
         ships.add(new BattleshipShip(BattleshipShip.ShipSize.SIZE_2, 8,0, BattleshipShip.ShipSide.HORIZONTAL, cells));
         return new BattleshipUserBoard(ships, cells);
     }
+    
     @SuppressWarnings("unused") //used when serializing
     public BattleshipUserBoard() {}
 
@@ -53,6 +54,7 @@ public class BattleshipUserBoard implements Serializable
     public List<BattleshipShip> getShips() {
         return ships;
     }
+    
     @SuppressWarnings("unused") //used when serializing
     public void setShips(List<BattleshipShip> ships) {
         this.ships = ships;
@@ -61,11 +63,11 @@ public class BattleshipUserBoard implements Serializable
     public BattleshipBoardCell[][] getCells() {
         return cells;
     }
+    
     @SuppressWarnings("unused") //used when serializing
     public void setCells(BattleshipBoardCell[][] cells) {
         this.cells = cells;
     }
-
 
     //returns ship which contains a given cell, if exists
     public BattleshipShip getShip(BattleshipBoardCell cell)
@@ -105,6 +107,5 @@ public class BattleshipUserBoard implements Serializable
         //returns true if the number of destroyed ships equals to the number of all the ships on the board
         return ships.stream().filter(BattleshipShip::isDestroyed).count() == ships.size();
     }
-
 
 }
