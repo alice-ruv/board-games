@@ -1,6 +1,6 @@
 package common;
-import javax.json.bind.annotation.JsonbProperty;
 
+import javax.json.bind.annotation.JsonbProperty;
 
 public class GameResult
 {
@@ -17,6 +17,7 @@ public class GameResult
 
     @JsonbProperty(value = "opponentDisplayName")
     private String opponentDisplayName;
+    
     @SuppressWarnings("unused") //used by json convertor
     public GameResult() {}
 
@@ -31,14 +32,17 @@ public class GameResult
     public Result getResult() {
         return result;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setResult(Result result) {
         this.result = result;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public int getGameTypeId() {
         return gameTypeId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameTypeId(int gameTypeId) {
         this.gameTypeId = gameTypeId;
@@ -47,6 +51,7 @@ public class GameResult
     public String getGameFinishTime() {
         return gameFinishTime;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameFinishTime(String gameFinishTime) {
         this.gameFinishTime = gameFinishTime;
@@ -55,9 +60,9 @@ public class GameResult
     public String getOpponentDisplayName() {
         return opponentDisplayName;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setOpponentDisplayName(String opponentDisplayName) {
         this.opponentDisplayName = opponentDisplayName;
     }
-
 }
