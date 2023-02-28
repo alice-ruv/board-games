@@ -29,10 +29,12 @@ public class User
     public int getUserId() {
         return userId;
     }
+    
     public void setUserId(int userId)
     {
         this.userId = userId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public String getUsername() {
         return username;
@@ -43,10 +45,12 @@ public class User
     {
         this.username = username;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public String getPassword() {
         return password;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setPassword(String password)
     {
@@ -56,6 +60,7 @@ public class User
     public String getDisplayName() {
         return displayName;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setDisplayName(String displayName)
     {
