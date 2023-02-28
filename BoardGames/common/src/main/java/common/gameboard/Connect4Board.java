@@ -18,13 +18,16 @@ public class Connect4Board implements IGameBoard
 
     @JsonbProperty(value = "gameBoardStatus")
     private GameBoardStatus gameBoardStatus;
+    
     @JsonbProperty(value = "playersColorMap")
     private Map<String /*userId*/, Connect4BoardCell.CellColor> playersColorMap;
+    
     @JsonbProperty(value = "connect4BoardCells")
     private Connect4BoardCell[][] connect4BoardCells;
 
     @JsonbProperty(value = "numOfUsedCells")
     private int numOfUsedCells;
+    
     @SuppressWarnings("unused") //used by json convertor
     public Connect4Board(){}
 
@@ -40,8 +43,10 @@ public class Connect4Board implements IGameBoard
         }
 
         this.playersColorMap = new HashMap<>();
+        
         //YELLOW color property belongs to the 1st player that joined to the game, which will make the 1st turn
         this.playersColorMap.put(String.valueOf(userInGameList.get(0).getUserId()), Connect4BoardCell.CellColor.YELLOW);
+        
         //RED color property belongs to the 2nd player that joined to the game, which will make the 2nd turn
         this.playersColorMap.put(String.valueOf(userInGameList.get(1).getUserId()), Connect4BoardCell.CellColor.RED);
 
@@ -49,27 +54,31 @@ public class Connect4Board implements IGameBoard
         numOfUsedCells = 0;
     }
 
-
     public Map<String, Connect4BoardCell.CellColor> getPlayersColorMap() {
         return playersColorMap;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setPlayersColorMap(Map<String, Connect4BoardCell.CellColor> playersColorMap) {
         this.playersColorMap = playersColorMap;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public Connect4BoardCell[][] getConnect4BoardCells() {
         return connect4BoardCells;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setConnect4BoardCells(Connect4BoardCell[][] connect4BoardCells)
     {
         this.connect4BoardCells = connect4BoardCells;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public int getNumOfUsedCells() {
         return numOfUsedCells;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setNumOfUsedCells(int numOfUsedCells) {
         this.numOfUsedCells = numOfUsedCells;
@@ -85,14 +94,15 @@ public class Connect4Board implements IGameBoard
     {   //Connect 4 doesn't require setup of the board before starting the game (unlike Battleship).
         return false;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameBoardStatus(GameBoardStatus gameBoardStatus) {
         this.gameBoardStatus = gameBoardStatus;
     }
 
     @Override
-    public void updateGameBoard(int userId, GameBoardCell gameBoardCell) throws GeneralErrorException {
-
+    public void updateGameBoard(int userId, GameBoardCell gameBoardCell) throws GeneralErrorException 
+    {
         Connect4BoardCell cell = new Connect4BoardCell(gameBoardCell.getRow(), gameBoardCell.getColumn(),
                 playersColorMap.get(String.valueOf(userId)));
 
@@ -109,7 +119,7 @@ public class Connect4Board implements IGameBoard
         if (playersColorMap.get(String.valueOf(userId)) != cell.getColor())
         {
              System.err.println("Unexpected color for cell in the game board.");
-            return false;
+             return false;
         }
 
         int row = cell.getRow();
@@ -156,16 +166,13 @@ public class Connect4Board implements IGameBoard
 
         for(int i = column - 1; i >=0; i--)
         {
-            if (connect4BoardCells[row][i].getColor() == color)
-            {
+            if (connect4BoardCells[row][i].getColor() == color) {
                 numOfSeq++;
             }
-            else
-            {
+            else {
                 break;
             }
-            if (numOfSeq == MATCH)
-            {
+            if (numOfSeq == MATCH) {
                 return true;
             }
         }
