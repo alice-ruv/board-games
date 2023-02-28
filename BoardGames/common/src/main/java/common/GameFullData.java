@@ -26,6 +26,4 @@ public class GameFullData
     public List<UserInGame> getUserInGameList() {
         return userInGameList;
     }
-
-
 }
