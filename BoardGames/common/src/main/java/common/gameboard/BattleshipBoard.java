@@ -9,6 +9,7 @@ public class BattleshipBoard implements IGameBoard
 
     @JsonbProperty(value = "gameBoardStatus")
     private IGameBoard.GameBoardStatus gameBoardStatus;
+    
     @JsonbProperty(value = "battleshipUserBoardMap")
     private Map<String /*userId*/, BattleshipUserBoard> battleshipUserBoardMap = new HashMap<>();
 
@@ -18,13 +19,13 @@ public class BattleshipBoard implements IGameBoard
     public Map<String/*userId*/, BattleshipUserBoard> getBattleshipUserBoardMap() {
         return battleshipUserBoardMap;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setBattleshipUserBoardMap(Map<String, BattleshipUserBoard> battleshipUserBoardMap) {
         this.battleshipUserBoardMap = battleshipUserBoardMap;
     }
 
-    public BattleshipBoard()
-    {
+    public BattleshipBoard() {
         gameBoardStatus = GameBoardStatus.RUNNING;
     }
 
@@ -49,7 +50,7 @@ public class BattleshipBoard implements IGameBoard
         opponentUserBoard.shoot(cell);
 
         if (opponentUserBoard.isGameOver())
-        {   //if it was the last "shot" to the targeted cell that was needed to win
+        {   //it was the last "shot" to the targeted cell that was needed to win
             gameBoardStatus = GameBoardStatus.WIN;
         }
     }
@@ -65,7 +66,6 @@ public class BattleshipBoard implements IGameBoard
 
         return opponentBoard.orElse(null);
     }
-
 
 
     @Override
