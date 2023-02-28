@@ -9,6 +9,7 @@ public class LogInRequest
 
     @JsonbProperty(value = "password")
     private String password;
+    
     @SuppressWarnings("unused") //used by json convertor
     public LogInRequest(){}
 
@@ -17,11 +18,13 @@ public class LogInRequest
         this.username = username;
         this.password = password;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setUsername(String username)
     {
         this.username = username;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setPassword(String password)
     {
