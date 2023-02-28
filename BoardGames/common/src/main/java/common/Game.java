@@ -8,7 +8,6 @@ public class Game
 {
     private final int gameId;
     private final int gameTypeId;
-
     private Timestamp startTime;
     private Timestamp endTime;
     private Timestamp lastTurnTime;
@@ -17,13 +16,13 @@ public class Game
     private Integer currUserTurn;
     private Integer winnerId;
 
-    public Game (int gameId, int gameType){
+    public Game (int gameId, int gameType) {
         this.gameId = gameId;
         this.gameTypeId = gameType;
     }
+    
     public Game(int gameId, Timestamp startTime, Timestamp endTime, Timestamp lastTurnTime, IGameBoard trackBoard,
-                GameStatus gameStatus, int gameType, Integer currUserTurn, Integer winnerId)
-    {
+                GameStatus gameStatus, int gameType, Integer currUserTurn, Integer winnerId) {
         this.gameId = gameId;
         this.gameTypeId = gameType;
         this.startTime = startTime;
