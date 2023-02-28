@@ -7,8 +7,10 @@ public class UpdatePlayerTurnRequest
 {
     @JsonbProperty(value = "gameId")
     private int gameId;
+    
     @JsonbProperty(value = "userId")
     private int userId;
+    
     @JsonbProperty(value = "gameBoardCell")
     private GameBoardCell gameBoardCell;
 
@@ -18,6 +20,7 @@ public class UpdatePlayerTurnRequest
         this.userId = userId;
         this.gameBoardCell = gameBoardCell;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public UpdatePlayerTurnRequest() {}
 
@@ -40,6 +43,7 @@ public class UpdatePlayerTurnRequest
     public GameBoardCell getGameBoardCell() {
         return gameBoardCell;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameBoardCell(GameBoardCell gameBoardCell) {
         this.gameBoardCell = gameBoardCell;
