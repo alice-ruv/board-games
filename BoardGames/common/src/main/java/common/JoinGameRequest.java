@@ -15,15 +15,18 @@ public class JoinGameRequest
         this.userId = userId;
         this.gameTypeId = gameTypeId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public JoinGameRequest() {}
 
     public int getUserId() {
         return userId;
     }
+    
     public void setUserId(int userId) {
         this.userId = userId;
     }
+    
     public int getGameTypeId() {
         return gameTypeId;
     }
