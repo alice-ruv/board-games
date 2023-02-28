@@ -14,6 +14,7 @@ public class GameTypeDetails
     private String instructions;
 
     public GameTypeDetails(){}
+    
     public GameTypeDetails(int gameTypeId, String gameName, String instructions)
     {
         this.gameTypeId = gameTypeId;
@@ -24,6 +25,7 @@ public class GameTypeDetails
     public int getGameTypeId() {
         return gameTypeId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameTypeId(int gameTypeId) {
         this.gameTypeId = gameTypeId;
@@ -32,6 +34,7 @@ public class GameTypeDetails
     public String getGameName() {
         return gameName;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameName(String gameName) {
         this.gameName = gameName;
@@ -40,6 +43,7 @@ public class GameTypeDetails
     public String getInstructions() {
         return instructions;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setInstructions(String instructions) {
         this.instructions = instructions;
