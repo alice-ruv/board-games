@@ -13,8 +13,7 @@ public class GameBoardCell implements Serializable
     @JsonbProperty(value = "column")
     private int column;
 
-    public GameBoardCell() {
-    }
+    public GameBoardCell() {}
 
     public GameBoardCell(int row, int column) {
         this.row = row;
@@ -32,9 +31,9 @@ public class GameBoardCell implements Serializable
     public int getColumn() {
         return column;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setColumn(int column) {
         this.column = column;
     }
-
 }
