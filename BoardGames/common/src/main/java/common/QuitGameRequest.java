@@ -9,6 +9,7 @@ public class QuitGameRequest
 
     @JsonbProperty(value = "gameId")
     int gameId;
+    
     @SuppressWarnings("unused") //used by json convertor
     public QuitGameRequest() {
     }
