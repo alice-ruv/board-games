@@ -12,8 +12,10 @@ public class BattleshipBoardCell extends GameBoardCell
         HIT, //current cell was targeted by opponent move and is a part of (damaged) ship
         MISS //current cell was targeted by opponent move and is not a part of ship
     }
+    
     @JsonbProperty(value = "cellState")
     private BattleshipBoardCell.CellState state;
+    
     @SuppressWarnings("unused") //used by json convertor
     public BattleshipBoardCell() {}
 
@@ -30,9 +32,9 @@ public class BattleshipBoardCell extends GameBoardCell
         this.state = state;
     }
 
-
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) 
+    {
         if(obj instanceof BattleshipBoardCell)
             if(((BattleshipBoardCell) obj).getColumn() == this.getColumn() && ((BattleshipBoardCell) obj).getRow() == this.getRow())
                 return true;
