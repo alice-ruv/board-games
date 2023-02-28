@@ -12,6 +12,7 @@ public class SignUpRequest
 
     @JsonbProperty(value = "password")
     private String password;
+    
     @SuppressWarnings("unused") //used by json convertor
     public SignUpRequest(){}
 
@@ -21,16 +22,19 @@ public class SignUpRequest
         this.password = password;
         this.displayName = displayName;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setDisplayName(String displayName)
     {
         this.displayName = displayName;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setUsername(String username)
     {
         this.username = username;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setPassword(String password)
     {
@@ -40,9 +44,11 @@ public class SignUpRequest
     public String getUsername() {
         return username;
     }
+    
     public String getPassword() {
         return password;
     }
+    
     public String getDisplayName() {
         return displayName;
     }
