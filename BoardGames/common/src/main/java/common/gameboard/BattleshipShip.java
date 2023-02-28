@@ -29,6 +29,7 @@ public class BattleshipShip implements Serializable
     private ShipSide side;
 
     private List<BattleshipBoardCell> cellsInShip;
+    
     @SuppressWarnings("unused") //used when serializing
     public BattleshipShip(){}
 
@@ -80,7 +81,6 @@ public class BattleshipShip implements Serializable
         this.cellsInShip = cellsInShip;
     }
 
-
     public boolean isDestroyed()
     {   //Ship is destroyed when the number of "HIT" cells in ship equals to the size of the ship (in other words,
         //when all cells of the ship are "HIT" cells).
@@ -88,5 +88,3 @@ public class BattleshipShip implements Serializable
     }
 
 }
-
-
