@@ -19,5 +19,4 @@ public class GameTurnMessage extends GameMessage
         return gameBoardCell;
     }
 
-
 }
