@@ -17,5 +17,4 @@ public interface IGameBoard extends Serializable
    GameBoardStatus getGameBoardStatus();
 
    boolean isSetupNeeded();
-
 }
