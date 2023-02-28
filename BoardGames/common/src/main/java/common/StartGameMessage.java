@@ -27,8 +27,7 @@ public class StartGameMessage extends GameMessage
     }
     
     @SuppressWarnings("unused") //used by serializer
-    public void setOpponentDisplayName(String opponentDisplayName) 
-    {
+    public void setOpponentDisplayName(String opponentDisplayName) {
         this.opponentDisplayName = opponentDisplayName;
     }
 
