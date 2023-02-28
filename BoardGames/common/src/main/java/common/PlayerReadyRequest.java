@@ -15,12 +15,14 @@ public class PlayerReadyRequest
         this.userId = userId;
         this.gameId = gameId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public PlayerReadyRequest() {}
 
     public int getUserId() {
         return userId;
     }
+    
     public int getGameId() {
         return gameId;
     }
