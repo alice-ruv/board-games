@@ -21,9 +21,9 @@ public class UpdatePlayerSetupRequest
         this.userId = userId;
         this.userBoard = userBoard;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public UpdatePlayerSetupRequest(){}
-
 
     public int getGameId() {
         return gameId;
@@ -44,6 +44,7 @@ public class UpdatePlayerSetupRequest
     public BattleshipUserBoard getUserBoard() {
         return userBoard;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setUserBoard(BattleshipUserBoard userBoard) {
         this.userBoard = userBoard;
