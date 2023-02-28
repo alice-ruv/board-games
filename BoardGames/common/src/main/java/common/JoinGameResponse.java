@@ -10,6 +10,7 @@ public class JoinGameResponse
     public JoinGameResponse(int gameId) {
         this.gameId = gameId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public JoinGameResponse() {}
 
@@ -20,6 +21,4 @@ public class JoinGameResponse
     public void setGameId(int gameId) {
         this.gameId = gameId;
     }
-
-
 }
