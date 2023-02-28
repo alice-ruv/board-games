@@ -9,8 +9,7 @@ public class StartGameMessage extends GameMessage
     private boolean isYourTurn;
     private IGameBoard gameBoard;
 
-    public StartGameMessage(String opponentDisplayName, boolean isYourTurn, IGameBoard gameBoard,
-                            IGameBoard.GameBoardStatus gameBoardStatus, Integer winnerId)
+    public StartGameMessage(String opponentDisplayName, boolean isYourTurn, IGameBoard gameBoard, IGameBoard.GameBoardStatus gameBoardStatus, Integer winnerId)
     {
         super(gameBoardStatus, winnerId);
         this.opponentDisplayName = opponentDisplayName;
@@ -26,14 +25,17 @@ public class StartGameMessage extends GameMessage
     public String getOpponentDisplayName() {
         return opponentDisplayName;
     }
+    
     @SuppressWarnings("unused") //used by serializer
-    public void setOpponentDisplayName(String opponentDisplayName) {
+    public void setOpponentDisplayName(String opponentDisplayName) 
+    {
         this.opponentDisplayName = opponentDisplayName;
     }
 
     public boolean isYourTurn() {
         return isYourTurn;
     }
+    
     @SuppressWarnings("unused") //used by serializer
     public void setYourTurn(boolean yourTurn) {
         isYourTurn = yourTurn;
@@ -42,6 +44,7 @@ public class StartGameMessage extends GameMessage
     public IGameBoard getGameBoard() {
         return gameBoard;
     }
+    
     @SuppressWarnings("unused") //used by serializer
     public void setGameBoard(IGameBoard gameBoard) {
         this.gameBoard = gameBoard;
