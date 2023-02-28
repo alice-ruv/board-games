@@ -9,6 +9,7 @@ public class GameResultsRequest
 
     @JsonbProperty(value = "gameTypeId")
     int gameTypeId;
+    
     @SuppressWarnings("unused") //used by json convertor
     public GameResultsRequest() {}
 
@@ -28,6 +29,7 @@ public class GameResultsRequest
     public int getGameTypeId() {
         return gameTypeId;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setGameTypeId(int gameTypeId) {
         this.gameTypeId = gameTypeId;
