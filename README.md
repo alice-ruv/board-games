@@ -1,5 +1,7 @@
 Board Games Server - Battleship & Connect 4
 ===========================================
+## System Options for Logged In User
+![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
 
 ## Battleship Game Display <br />
 ![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
