@@ -3,7 +3,7 @@ Board Game Server
 
 Installation Requirements:
 --------------------------
-1) JDK 1.8 (Version 8.0.202 is used for this application)  https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
+1) JDK 1.8 (Version 8.0.202 is used for this application)<br />https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
 
 2) Glassfish 5.0.0
 
