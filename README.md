@@ -3,27 +3,17 @@ Board Game Server
 
 Installation Requirements:
 --------------------------
-1) JDK 1.8 (Version 8.0.202 is used for this application)<br />https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
+1) JDK 1.8 (Version 8.0.202 is used for this application) <br />https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
 
-2) Glassfish 5.0.0
+2) Glassfish 5.0.0 <br />http://download.oracle.com/glassfish/5.0.1/release/java_ee_sdk-8u1.zip	
 
-   http://download.oracle.com/glassfish/5.0.1/release/java_ee_sdk-8u1.zip	
+3) PostgreSQL 14 <br />https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
-3) PostgreSQL 14
+4) JDBC Driver (Postgresql JDBC 42.4.0) <br />https://jdbc.postgresql.org/download/
 
-   https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+5)  InteliJ ultimate <br />https://www.jetbrains.com/idea/download/#section=windows
 
-4) JDBC Driver (Postgresql JDBC 42.4.0 )
-
-   https://jdbc.postgresql.org/download/
-
-5)  InteliJ ultimate 
-
-     https://www.jetbrains.com/idea/download/#section=windows
-
-6) Launch4j - used for creating exe file to run the client, not from IntelliJ
-
-   https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/
+6) Launch4j - used for creating exe file to run the client, not from IntelliJ <br />https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/
 
 ►This application was tested in 1920×1080 display resolution in windows. 
 
