@@ -34,8 +34,8 @@ Installation Requirements:
 Installing Instructions:
 ------------------------
 1) Install Postgres
-	-- set password to “password”
-	-- keep port to default (5432)
+	- set password to “password”
+	- keep port to default (5432)
 
 2) Unpack Glassfish to c drive
 
@@ -50,10 +50,10 @@ Installing Instructions:
 
 
 6) Deploy server:
-	• Deploy server from InteliJ by running “ServerApp” run configuration
-	• Deploy server from cmd (only after it was deployed at least once by IntelliJ): 
-		o Run “asadmin start-domain” in cmd from C:\glassfish5\glassfish\bin
-		o Go to localhost:4848 in web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+	- Deploy server from InteliJ by running “ServerApp” run configuration
+	- Deploy server from cmd (only after it was deployed at least once by IntelliJ): 
+		- Run “asadmin start-domain” in cmd from C:\glassfish5\glassfish\bin
+		- Go to localhost:4848 in web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 7) Deploy client:
 	• Deploy client from InteliJ by running “ClientApp” run configuration
