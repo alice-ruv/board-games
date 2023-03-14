@@ -1,5 +1,5 @@
-Board Game Server
-=================
+Board Games Server - Battleship & Connect 4
+===========================================
 
 ## Battleship Game Display <br />
 ![image](https://user-images.githubusercontent.com/124344785/224997886-c0e521d2-24e4-4e38-a5f4-53e7da429e8c.png)
