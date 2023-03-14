@@ -2,11 +2,9 @@ Board Games Server - Battleship & Connect 4
 ===========================================
 
 ## Battleship Game Display <br />
-![image](https://user-images.githubusercontent.com/124344785/224997886-c0e521d2-24e4-4e38-a5f4-53e7da429e8c.png)
 ![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
 
 ## Connect 4 Game Display <br />
-![image](https://user-images.githubusercontent.com/124344785/224998274-3a6c7fb9-9583-4383-ac97-8da1cf3ec635.png)
 ![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)
 
 ## Game Results Tracking </br>
