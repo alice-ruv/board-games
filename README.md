@@ -1,6 +1,16 @@
 Board Game Server
 =================
 
+##Battleship game display:
+![image](https://user-images.githubusercontent.com/124344785/224997886-c0e521d2-24e4-4e38-a5f4-53e7da429e8c.png)
+![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
+
+##Connect 4 game display:
+![image](https://user-images.githubusercontent.com/124344785/224998274-3a6c7fb9-9583-4383-ac97-8da1cf3ec635.png)
+![image](https://user-images.githubusercontent.com/124344785/224998377-01db05f6-edca-4ebb-b34c-a0f72043fefe.png)
+
+******************************************************************************************************************************************
+
 Installation Requirements:
 --------------------------
 1) JDK 1.8 (Version 8.0.202 is used for this application) <br />https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
