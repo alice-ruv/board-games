@@ -63,4 +63,4 @@ Installing Instructions:
 		* You can use Launch4j to create exe file to run the client:
 			* Define Output file and Jar 
 			* Define Min and Max JRE version 
-			* Select the setting icon for creating the exe 
+			* Select the setting icon for creating the exe 	●
