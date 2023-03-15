@@ -35,8 +35,8 @@ Installation Requirements:
 Installing Instructions:
 ------------------------
 1) Install Postgres
-   <li> set password to “password” <ul>
-   <li> keep port to default (5432) <ul>
+   <li> set password to “password” </li>
+   <li> keep port to default (5432) </li>
 
 2) Unpack Glassfish to c drive
 
