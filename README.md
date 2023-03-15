@@ -57,10 +57,10 @@ Installing Instructions:
 		- Go to localhost:4848 in web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 7) Deploy client:
-	- Deploy client from InteliJ by running “ClientApp” run configuration
-	- Deploy client from cmd: 
-		- Build artifact clientJavaFXApp
-		- You can use Launch4j to create exe file to run the client:
-			- Define Output file and Jar 
-			- Define Min and Max JRE version 
-			- Select the setting icon for creating the exe 
+	* Deploy client from InteliJ by running “ClientApp” run configuration
+	* Deploy client from cmd: 
+ 		* Build artifact clientJavaFXApp
+		* You can use Launch4j to create exe file to run the client:
+			* Define Output file and Jar 
+			* Define Min and Max JRE version 
+			* Select the setting icon for creating the exe 
