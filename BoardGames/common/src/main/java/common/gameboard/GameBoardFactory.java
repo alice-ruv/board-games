@@ -4,6 +4,7 @@ import common.GameFullData;
 import common.exceptions.GeneralErrorException;
 import static common.GameTypes.BATTLESHIP;
 import static common.GameTypes.CONNECT_4;
+
 public class GameBoardFactory
 {
     public static IGameBoard createGameBoard(GameFullData gameFullData) throws GeneralErrorException
