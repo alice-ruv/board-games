@@ -9,7 +9,7 @@ Board Games Server - Battleship & Connect 4
 ## Connect 4 game display <br />
 ![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)
 
-## Game results tracking display </br>
+## Game results tracking display <br />
 ![image](https://user-images.githubusercontent.com/124344785/225000456-6416d246-9094-4fdc-8c0f-3aaa32235776.png)
 
 ******************************************************************************************************************************************
@@ -60,7 +60,7 @@ Installing Instructions:
 	* Deploy client from InteliJ by running “ClientApp” run configuration
 	* Deploy client from cmd: 
  		* Build artifact clientJavaFXApp
-		* You can use Launch4j to create exe file to run the client:
-			● Define Output file and Jar 
-			● Define Min and Max JRE version 
+		* You can use Launch4j to create exe file to run the client: <br />
+			● Define Output file and Jar <br />
+			● Define Min and Max JRE version <br />
 			● Select the setting icon for creating the exe 	
