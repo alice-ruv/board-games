@@ -61,6 +61,6 @@ Installing Instructions:
 	- Deploy client from cmd: 
 		- Build artifact clientJavaFXApp
 		- You can use Launch4j to create exe file to run the client:
-			- Define Output file and Jar 
-			- Define Min and Max JRE version 
-			- Select the setting icon for creating the exe 
+			a. Define Output file and Jar 
+			b. Define Min and Max JRE version 
+			c. Select the setting icon for creating the exe 
