@@ -9,7 +9,6 @@ public class GameNetworkManager implements IGameNetworkManager
 {
     private JMSContext context;
 
-
     private GameNetworkManager()
     {
         InitialContext ctx;
@@ -45,6 +44,7 @@ public class GameNetworkManager implements IGameNetworkManager
         System.out.println(topicName + " created.");
         this.context.createProducer().send(topic, gameMessage);
     }
+    
     @Override
     protected void finalize()
     {
