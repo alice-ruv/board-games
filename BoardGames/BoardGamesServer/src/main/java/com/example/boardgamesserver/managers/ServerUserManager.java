@@ -16,16 +16,16 @@ public class ServerUserManager implements IServerUserManager
         static final ServerUserManager instance = new ServerUserManager();
     }
 
-    public static ServerUserManager getInstance()
-    {
+    public static ServerUserManager getInstance() {
         return InstanceHolder.instance;
     }
+    
     private ServerUserManager(){}
+    
     @Override
     public User signUp(SignUpRequest input) throws UserAlreadyExistException, GeneralErrorException
     {
         IDatabaseManager dbManager =  DatabaseManager.getInstance();
-
         return dbManager.createUser(input.getUsername(),input.getPassword(),input.getDisplayName());
 
     }
@@ -34,7 +34,6 @@ public class ServerUserManager implements IServerUserManager
     public User logIn(LogInRequest input) throws UserNotFoundException, GeneralErrorException
     {
         IDatabaseManager dbManager = DatabaseManager.getInstance();
-
         return dbManager.getUser(input.getUsername(),input.getPassword());
     }
 }
