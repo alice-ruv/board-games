@@ -13,8 +13,10 @@ public class Connect4BoardCell extends GameBoardCell
         YELLOW,
         RED
     }
+    
     @JsonbProperty(value = "cellColor")
     private CellColor color;
+    
     @SuppressWarnings("unused") //used by json convertor
     public Connect4BoardCell() {}
 
@@ -27,6 +29,7 @@ public class Connect4BoardCell extends GameBoardCell
         super(row, column);
         this.color = color;
     }
+    
     @SuppressWarnings("unused") //used by json convertor
     public void setColor(CellColor color) {
         this.color = color;
