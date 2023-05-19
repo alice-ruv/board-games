@@ -1,7 +1,6 @@
 package client.controllers;
 
 import client.ClientContext;
-
 import common.GameResult;
 import common.exceptions.GeneralErrorException;
 import javafx.collections.FXCollections;
@@ -19,7 +18,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import static client.Scenes.LOGGED_IN;
-
 
 public class GameResultsController extends BaseController
 {
@@ -86,11 +84,8 @@ public class GameResultsController extends BaseController
     public static class LocalTimeGameResult    //represents a row in the results table
     {
         private final GameResult.Result result;
-
         private final LocalDate date;
-
         private final LocalTime time;
-
         private final String opponentDisplayName;
 
         public LocalTimeGameResult(GameResult.Result result, String finishTime, String opponentDisplayName)
@@ -101,10 +96,12 @@ public class GameResultsController extends BaseController
             this.time = LocalTime.parse(timestamp.toLocalDateTime().toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
             this.opponentDisplayName = opponentDisplayName;
         }
+        
         @SuppressWarnings("unused") //used by resultsTable
         public LocalDate getDate() {
            return date;
         }
+        
         @SuppressWarnings("unused") //used by resultsTable
         public LocalTime getTime() {
            return time;
