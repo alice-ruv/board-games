@@ -14,7 +14,6 @@ public class Paths
     public static final String GAME_TYPES_DETAILS ="/game-types-details";
     public static final String JOIN_GAME = "/join-game";
     public static final String PLAYER_READY = "/player-ready";
-
     public static final String UPDATE_PLAYER_TURN = "/update-player-turn";
     public static final String UPDATE_PLAYER_SETUP = "/update-player-setup";
     public static final String GAME_RESULTS = "/game-results";
