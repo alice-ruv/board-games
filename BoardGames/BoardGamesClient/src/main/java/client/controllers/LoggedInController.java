@@ -15,8 +15,8 @@ import static common.GameTypes.BATTLESHIP;
 import static common.GameTypes.CONNECT_4;
 import static client.Scenes.*;
 
-public class LoggedInController extends BaseController {
-
+public class LoggedInController extends BaseController 
+{
     @FXML
     public ToggleGroup gameTypeToggleGroup;
     
