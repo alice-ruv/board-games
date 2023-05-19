@@ -45,7 +45,6 @@ public class JoinGameController extends BaseController
                 {   //this player canceled joining game before the game starts
                     return;
                 }
-
             }
             else
             {
