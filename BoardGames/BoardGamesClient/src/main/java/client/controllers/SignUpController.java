@@ -10,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import static client.Scenes.*;
 
 public class SignUpController extends BaseController
