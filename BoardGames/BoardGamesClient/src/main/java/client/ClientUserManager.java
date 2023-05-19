@@ -14,7 +14,8 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import static common.Paths.*;
 
-public class ClientUserManager implements IClientUserManager{
+public class ClientUserManager implements IClientUserManager
+{
     private User user;
     private String serverName;
 
@@ -33,7 +34,6 @@ public class ClientUserManager implements IClientUserManager{
     {
         try
         {
-
             Jsonb jsonb = JsonbBuilder.create();
             HttpResponse<String> apiResponse = Unirest.post(getUrl(Paths.SIGN_UP))
                     .header("Content-Type", "application/json")
