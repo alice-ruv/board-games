@@ -7,7 +7,8 @@ import common.exceptions.UserAlreadyExistException;
 import common.exceptions.GeneralErrorException;
 import common.exceptions.UserNotFoundException;
 
-public interface IClientUserManager {
+public interface IClientUserManager 
+{
    void setServerName(String serverName);
 
    User getUser();
