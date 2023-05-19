@@ -19,8 +19,10 @@ public class LoggedInController extends BaseController {
 
     @FXML
     public ToggleGroup gameTypeToggleGroup;
+    
     @FXML
     private Label helloDisplayNameLabel;
+    
     @FXML
     private RadioButton battleshipButton;
 
