@@ -102,5 +102,4 @@ public class LogInController extends BaseController
         logInButton.setDisable(bool);
     }
 
-
 }
