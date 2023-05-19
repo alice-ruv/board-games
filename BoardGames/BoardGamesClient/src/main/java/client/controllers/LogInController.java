@@ -1,7 +1,6 @@
 package client.controllers;
 
 import common.LogInRequest;
-import client.Scenes;
 import common.exceptions.GeneralErrorException;
 import common.exceptions.UserNotFoundException;
 import client.ClientContext;
@@ -10,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import static client.Scenes.*;
 
 public class LogInController extends BaseController
 {
@@ -31,7 +31,7 @@ public class LogInController extends BaseController
     @FXML
     public void settingsButtonPressed(ActionEvent ignoredEvent)
     {
-        clientContext.changeScene(Scenes.SETTINGS);
+        clientContext.changeScene(SETTINGS);
     }
 
     @FXML
@@ -69,13 +69,13 @@ public class LogInController extends BaseController
             setControlsDisable(false);
             return;
         }
-        clientContext.changeScene(Scenes.LOGGED_IN);
+        clientContext.changeScene(LOGGED_IN);
     }
 
     @FXML
     public void signUpButtonPressed(ActionEvent ignoredEvent)
     {
-        clientContext.changeScene(Scenes.SIGN_UP);
+        clientContext.changeScene(SIGN_UP);
     }
 
     @Override
