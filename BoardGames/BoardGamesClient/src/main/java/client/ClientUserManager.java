@@ -12,7 +12,6 @@ import common.exceptions.GeneralErrorException;
 import common.exceptions.UserNotFoundException;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-
 import static common.Paths.*;
 
 public class ClientUserManager implements IClientUserManager{
