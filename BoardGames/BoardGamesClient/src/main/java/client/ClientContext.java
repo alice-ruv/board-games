@@ -69,8 +69,7 @@ public class ClientContext
                 return true;
             }
         }
-        catch (UnirestException ignored)
-        {}
+        catch (UnirestException ignored) {}
 
         return false;
     }
