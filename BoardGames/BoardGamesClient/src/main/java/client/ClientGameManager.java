@@ -369,7 +369,7 @@ public class ClientGameManager implements IClientGameManager, MessageListener
     }
 
     private void handleGameMessage(GameMessage gameMessage)
-    {
+    {   
         if (gameMessage instanceof StartGameMessage)
         {
             setStartGameMessage((StartGameMessage)gameMessage);
@@ -382,7 +382,7 @@ public class ClientGameManager implements IClientGameManager, MessageListener
         }
 
         if (gameMessage instanceof GameTurnMessage)
-        {
+        {   //the game is finished, we need to set StartGameMessage and GameSetupMessage in case this client is waiting on one of this properties
             if (gameMessage.getGameBoardStatus() != IGameBoard.GameBoardStatus.RUNNING)
             {
                 setStartGameMessage(new StartGameMessage(null, false, null,
