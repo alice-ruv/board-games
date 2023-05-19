@@ -35,7 +35,7 @@ public class ClientUserManager implements IClientUserManager
         try
         {
             Jsonb jsonb = JsonbBuilder.create();
-            HttpResponse<String> apiResponse = Unirest.post(getUrl(Paths.SIGN_UP))
+            HttpResponse<String> apiResponse = Unirest.post(getUrl(SIGN_UP))
                     .header("Content-Type", "application/json")
                     .body(jsonb.toJson(input))
                     .asString();
@@ -68,7 +68,7 @@ public class ClientUserManager implements IClientUserManager
         try
         {
             Jsonb jsonb = JsonbBuilder.create();
-            HttpResponse<String> apiResponse = Unirest.post(getUrl(Paths.LOG_IN))
+            HttpResponse<String> apiResponse = Unirest.post(getUrl(LOG_IN))
                     .header("Content-Type", "application/json")
                     .body(jsonb.toJson(input))
                     .asString();
