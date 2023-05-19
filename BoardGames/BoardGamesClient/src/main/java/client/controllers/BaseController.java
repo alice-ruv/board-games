@@ -6,9 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
-public abstract class BaseController implements Initializable {
-
+public abstract class BaseController implements Initializable 
+{
     protected ClientContext clientContext;
+    
     public void postInit(ClientContext clientContext)
     {
         this.clientContext = clientContext;
