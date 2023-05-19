@@ -30,6 +30,7 @@ public class GameInstructionsController extends BaseController
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){}
+    
     @Override
     public void postInit(ClientContext clientContext)
     {
