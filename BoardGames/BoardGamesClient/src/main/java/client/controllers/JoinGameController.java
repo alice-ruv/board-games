@@ -16,7 +16,6 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import static common.GameTypes.BATTLESHIP;
 import static common.GameTypes.CONNECT_4;
 
