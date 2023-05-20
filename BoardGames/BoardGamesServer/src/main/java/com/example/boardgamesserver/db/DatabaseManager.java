@@ -84,7 +84,7 @@ public class DatabaseManager implements IDatabaseManager
             ResultSet rs = stmt.executeQuery(sql);
             rs.next();
             if(rs.getBoolean(1))
-            {   //if our database has been already created
+            {   //our database has been already created
                 return;
             }
         }
