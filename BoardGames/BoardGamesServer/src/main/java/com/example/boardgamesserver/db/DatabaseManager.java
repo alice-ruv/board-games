@@ -458,8 +458,8 @@ public class DatabaseManager implements IDatabaseManager
     }
 
     @Override
-    public List<GameResult> getUserGameResults(int gameTypeId, int userId) throws GeneralErrorException {
-
+    public List<GameResult> getUserGameResults(int gameTypeId, int userId) throws GeneralErrorException 
+    {
         String sql = "SELECT winner_id, end_time, display_name FROM game g JOIN user_game ug ON g.game_id = ug.game_id  " +
                 "JOIN users u ON ug.user_id = u.user_id WHERE u.user_id <> ? AND g.game_id IN " +
                 "(SELECT g.game_id FROM game g JOIN user_game u ON  g.game_id = u.game_id  " +
@@ -494,7 +494,8 @@ public class DatabaseManager implements IDatabaseManager
     }
 
     @Override
-    public boolean updateGame(GameUpdateData data, boolean overwriteFinishingState) throws GeneralErrorException {
+    public boolean updateGame(GameUpdateData data, boolean overwriteFinishingState) throws GeneralErrorException 
+    {
         try (Connection conn = connect()) {
             if (updateGameInner(conn, data, overwriteFinishingState)) {
                 conn.commit();
@@ -512,12 +513,14 @@ public class DatabaseManager implements IDatabaseManager
     }
 
     @Override
-    public boolean updateGame(GameUpdateData data) throws GeneralErrorException {
+    public boolean updateGame(GameUpdateData data) throws GeneralErrorException 
+    {
         return updateGame(data, false);
     }
 
     @Override
-    public void updatePlayerReady(int userId, int gameId) throws GeneralErrorException {
+    public void updatePlayerReady(int userId, int gameId) throws GeneralErrorException 
+    {
         String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id=? AND game_id=?";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql))
@@ -568,7 +571,8 @@ public class DatabaseManager implements IDatabaseManager
         sql = sql + ((overwriteFinishingState) ?
                 "WHERE game_id = ? AND status <> 'FINISHED'" : "WHERE game_id = ? AND status <> 'FINISHING' AND status <> 'FINISHED'");
 
-        try (PreparedStatement pstmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY)) {
+        try (PreparedStatement pstmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY)) 
+        {
             int index = 1;
             if (data.getStartTime() != null) {
                 pstmt.setTimestamp(index, data.getStartTime());
@@ -621,7 +625,8 @@ public class DatabaseManager implements IDatabaseManager
         }
     }
 
-    private Game createGame(Connection conn, int gameTypeId) throws SQLException {
+    private Game createGame(Connection conn, int gameTypeId) throws SQLException 
+    {
         String sql = "INSERT INTO game(game_type_id) VALUES (?) RETURNING game_id";
         try (PreparedStatement pstmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY))
         {
@@ -633,7 +638,8 @@ public class DatabaseManager implements IDatabaseManager
         }
     }
 
-    private void connectUserToGame(Connection conn, int userId, int gameId) throws SQLException {
+    private void connectUserToGame(Connection conn, int userId, int gameId) throws SQLException 
+    {
         String sql = "INSERT INTO user_game(user_id, game_id) VALUES (?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, userId);
@@ -642,7 +648,8 @@ public class DatabaseManager implements IDatabaseManager
         }
     }
 
-    public GameFullData getGameFullData(int gameId) throws GeneralErrorException {
+    public GameFullData getGameFullData(int gameId) throws GeneralErrorException 
+    {
         String sql = "SELECT  g.start_time, g.end_time, g.last_turn_time, g.track_board, g.status, g.game_type_id, \n" +
                 "g.curr_user_turn,g.winner_id ,t.game_name, t.instructions, ug.user_id, ug.is_ready, u.display_name \n" +
                 "FROM game g JOIN game_type t ON g.game_type_id = t.game_type_id \n" +
@@ -668,11 +675,11 @@ public class DatabaseManager implements IDatabaseManager
             int currUserTurn = rs.getInt(7);
             int winnerId = rs.getInt(8);
 
-
             String gameName = rs.getString(9);
             String gameInstructions = rs.getString(10);
 
-            if (gameBoardString != null) {
+            if (gameBoardString != null) 
+            {
                 Jsonb jsonb = JsonbBuilder.create();
                 gameBoard = jsonb.fromJson(gameBoardString,
                         (gameName.equals(GameTypes.CONNECT_4)) ? Connect4Board.class : BattleshipBoard.class);
@@ -701,15 +708,17 @@ public class DatabaseManager implements IDatabaseManager
     }
 
     @Override
-    public void deleteGame(int gameId) throws GeneralErrorException {
+    public void deleteGame(int gameId) throws GeneralErrorException 
+    {
         String sql = "DELETE FROM game WHERE game_id = ?";
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setInt(1, gameId);
             pstmt.executeUpdate();
-
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) 
+        {
             e.printStackTrace();
             System.err.println(e.getMessage());
             throw new GeneralErrorException();
