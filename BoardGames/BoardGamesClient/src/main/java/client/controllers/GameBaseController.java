@@ -21,13 +21,10 @@ public abstract class GameBaseController extends BaseController
 {
     @FXML
     protected ImageView gameResultImageView;
-
     @FXML
     protected Label playerMessageLabel;  //indicates the turn of current player and whether the player wins/looses the game
-
     @FXML
     protected Label gameNameLabel;
-
     @FXML
     protected Label displayNameLabel; //display name of current user
 
