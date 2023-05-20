@@ -79,14 +79,14 @@ public abstract class GameBaseController extends BaseController
 
         Platform.runLater(()->
         {
-                    if (lastOpponentTurn.getGameBoardStatus() == IGameBoard.GameBoardStatus.RUNNING)
-                    {
-                        handleOpponentTurn(lastOpponentTurn);
-                    }
-                    else
-                    {
-                        handleGameEnd(lastOpponentTurn);
-                    }
+            if (lastOpponentTurn.getGameBoardStatus() == IGameBoard.GameBoardStatus.RUNNING)
+            {
+                handleOpponentTurn(lastOpponentTurn);
+            }
+            else
+            {
+                handleGameEnd(lastOpponentTurn);
+            }
         });
     }
 
