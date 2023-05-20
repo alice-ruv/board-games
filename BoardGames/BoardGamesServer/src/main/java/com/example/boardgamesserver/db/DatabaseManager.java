@@ -22,12 +22,12 @@ import java.util.ArrayList;
 import java.util.List;
 import static java.sql.Connection.TRANSACTION_SERIALIZABLE;
 
-public class DatabaseManager implements IDatabaseManager {
+public class DatabaseManager implements IDatabaseManager 
+{
     private static final String dbName = "gameserverdb";
     private static final String baseUrl = "jdbc:postgresql://localhost/";
     private static final String user = "postgres";
     private static final String password = "password";
-
     private static final String resourceName = "jdbc/gameServerDB";
 
     //SQLSTATE value which returned when a unique value constraint is violated
