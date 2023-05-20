@@ -16,8 +16,8 @@ public class GameNetworkManager implements IGameNetworkManager
             ctx = new InitialContext();
             ConnectionFactory connectionFactory = (ConnectionFactory)ctx.lookup("java:comp/DefaultJMSConnectionFactory");
             this.context = connectionFactory.createContext();
-
-        } catch (NamingException e) {
+        } 
+        catch (NamingException e) {
             throw new RuntimeException(e);
         }
         catch (Exception e) {
