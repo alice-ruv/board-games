@@ -43,7 +43,7 @@ public abstract class GameBaseController extends BaseController
         if(!isGameFinished)
         {
             //If user presses Quit button before the game finished, we will let him confirm his selection before quiting the game.
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,null, ButtonType.YES ,ButtonType.CANCEL);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, null, ButtonType.YES, ButtonType.CANCEL);
             alert.setTitle("Quit game confirmation");
             alert.setHeaderText("Are you sure that you want to quit the game?");
             Optional<ButtonType> buttonRes = alert.showAndWait();
