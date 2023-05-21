@@ -184,7 +184,7 @@ public class ServerGameManager implements IServerGameManager {
         {   //game is over
             Integer winnerId = (gameBoardStatus == IGameBoard.GameBoardStatus.WIN ? input.getUserId() : null);
             GameUpdateData gameUpdateData = GameUpdateData.createInstanceEnd(
-                    input.getGameId(), currentTimestamp, currentTimestamp, gameBoard,GameStatus.FINISHED, winnerId);
+                    input.getGameId(), currentTimestamp, currentTimestamp, gameBoard, GameStatus.FINISHED, winnerId);
 
             if (!dbManager.updateGame(gameUpdateData))
             {   //game probably already finished in db
@@ -256,8 +256,8 @@ public class ServerGameManager implements IServerGameManager {
         try
         {
             IDatabaseManager dbManager = DatabaseManager.getInstance();
-
             GameFullData gameFullData = dbManager.getGameFullData(input.getGameId());
+            
             if (gameFullData == null)
             {
                 System.err.println("Game data is not found.");
