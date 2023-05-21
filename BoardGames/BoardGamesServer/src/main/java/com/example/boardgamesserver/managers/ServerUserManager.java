@@ -11,12 +11,13 @@ import com.example.boardgamesserver.db.IDatabaseManager;
 
 public class ServerUserManager implements IServerUserManager
 {
-
-    private static final class InstanceHolder {
+    private static final class InstanceHolder 
+    {
         static final ServerUserManager instance = new ServerUserManager();
     }
 
-    public static ServerUserManager getInstance() {
+    public static ServerUserManager getInstance() 
+    {
         return InstanceHolder.instance;
     }
     
