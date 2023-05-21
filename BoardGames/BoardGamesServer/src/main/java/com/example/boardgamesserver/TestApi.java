@@ -7,10 +7,9 @@ import static common.Paths.*;
 public class TestApi { //helps to check connectivity from client to server
     @GET
     @Produces("application/string")
-    public String test() {
-
+    public String test() 
+    {
         return "Ok";
     }
 
 }
-
