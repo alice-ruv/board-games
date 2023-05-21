@@ -87,8 +87,7 @@ public class ServerGameManager implements IServerGameManager {
 
                     for (UserInGame user : gameFullData.getUserInGameList())
                     {
-                        GameTurnMessage currPlayerMessage = new GameTurnMessage(
-                                null, IGameBoard.GameBoardStatus.WIN, winnerId);
+                        GameTurnMessage currPlayerMessage = new GameTurnMessage(null, IGameBoard.GameBoardStatus.WIN, winnerId);
                         gameNetworkManager.sendMessage(user.getUserId(), gameId, currPlayerMessage);
                     }
                 }
