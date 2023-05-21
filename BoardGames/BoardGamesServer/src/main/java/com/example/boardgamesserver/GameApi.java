@@ -9,7 +9,8 @@ import java.util.List;
 import static common.Paths.*;
 
 @Path(GAME)
-public class GameApi {
+public class GameApi 
+{
     @GET
     @Path(GAME_TYPES_DETAILS)
     @Produces("application/json")
@@ -31,7 +32,8 @@ public class GameApi {
     @Path(JOIN_GAME)
     @Produces("application/json")
     @Consumes("application/json")
-    public JoinGameResponse joinGame(JoinGameRequest input) {
+    public JoinGameResponse joinGame(JoinGameRequest input) 
+    {
         try
         {
             IServerGameManager gameManager = ServerGameManager.getInstance();
@@ -121,7 +123,3 @@ public class GameApi {
     }
 
 }
-
-
-
-
