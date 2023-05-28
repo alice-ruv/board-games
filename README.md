@@ -1,5 +1,8 @@
 Board Games Server - Battleship & Connect 4
 ===========================================
+
+* [![JDBC][JDBC.js]][JDBC-url]
+
 ## System options for logged in user display
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
 
