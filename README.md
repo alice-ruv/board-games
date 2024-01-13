@@ -83,9 +83,9 @@ User Manual
      As a default, server URL is set to localhost. Update your server URL and press "Save". <br />
 
 2) Entering the System: <br />
-   * If the server URL is provided correctly, the following screen will appear: <br />
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br />
-     If you're already registered, fill your username and password to enter your user account. <br />
-     Otherwise, enter "Sign up" to create your own account: <br />
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br />
-      After filling in the details correctly, you will enter your user account. <br />
+   If the server URL is provided correctly, the following screen will appear: <br />
+   ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br />
+   If you're already registered, fill your username and password to enter your user account. <br />
+   Otherwise, enter "Sign up" to create your own account: <br />
+   ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br />
+   After filling in the details correctly, you will enter your user account. <br />
