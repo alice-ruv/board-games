@@ -1,7 +1,7 @@
 Board Games Server - Battleship & Connect 4
 ===========================================
 Board game implementation for Battleship and Connect 4 in Java. <br />
-Designated for two remote players with game results tracking.<br />
+Designated for two players with game results tracking.<br />
 
 Server side: 
 * RESTful server using Glassfish
