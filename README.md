@@ -11,7 +11,7 @@ Server side:
 Client side: 
 * Sending REST API requests
 * Receiving JMS messages
-* UI by using JavaFX <br />
+* UI by using JavaFX FXML<br />
 
 ## System options for logged in user display
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
