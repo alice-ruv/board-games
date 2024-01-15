@@ -9,7 +9,7 @@ Server side:
 * Connection to PostgreSQL DB by JDBC<br />
 
 Client side: 
-* Sending REST API requests and receiving JSON from HTTP responses
+* Sending REST API requests and receiving HTTP responses
 * Receiving JMS messages
 * UI by using JavaFX FXML<br />
 
