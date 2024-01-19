@@ -55,7 +55,7 @@ Installing Instructions
 
 3) Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 
-4) Overwrite domains.xml to c:\glassfish5\glassfish\domains\domain1\config\
+4) Overwrite domain.xml to c:\glassfish5\glassfish\domains\domain1\config\
    The file exists in final_project\domain.xml
 
 5) Import project in InteliJ and build it. </br >
