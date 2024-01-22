@@ -5,13 +5,13 @@ Board games implementation in Java for Battleship and Connect 4, designated for 
 Server side: 
 * RESTful server using Glassfish
 * Receiving REST API requests
-* Sending messages to clients by Jakarta Messaging API (AKA JMS or Java Message Service)
-* Connection to PostgreSQL DB by JDBC<br />
+* Sending messages to clients by JMS message broker
+* JDBC connection to PostgreSQL DB<br />
 
 Client side: 
 * Sending REST API requests and receiving HTTP responses
 * Receiving JMS messages
-* UI by using JavaFX <br />
+* UI by JavaFX <br />
 
 ## System options for logged in user display
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
