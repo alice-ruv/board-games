@@ -5,7 +5,7 @@ Board games implementation in Java for Battleship and Connect 4, designated for 
 Server side: 
 * RESTful server using Glassfish application server
 * Receiving REST API requests
-* Sending messages via JMS broker 
+* Sending messages via OpenMQ JMS broker 
 * JDBC connection to PostgreSQL DB<br />
 
 Client side: 
