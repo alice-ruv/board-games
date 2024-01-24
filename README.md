@@ -84,7 +84,8 @@ Installation Instructions
 5) Import project in InteliJ and build it.<br>
      If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br> 
      press configure and then add your GlassFish Home directory.<br>
-   
+
+<br>
 
 6) Deploy server:
 	- Deploy server from InteliJ by running “ServerApp” run configuration<br>
@@ -92,6 +93,7 @@ Installation Instructions
 		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin<br>
 		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.<br>
 
+<br>
 
 7) Deploy client:
 	* Deploy client from InteliJ by running “ClientApp” run configuration
