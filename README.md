@@ -44,7 +44,7 @@ Installation Requirements
 
 5) InteliJ ultimate <br>https://www.jetbrains.com/idea/download/#section=windows
 
-6) Launch4j - used for creating exe file to run the client, not from IntelliJ <br>https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/<br>
+6) Launch4j (optional) - used for creating an exe file to run the client, not from IntelliJ <br>https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/<br>
 
 ► *This application was tested in 1920×1080 display resolution in Windows.* 
 
