@@ -54,54 +54,53 @@ Installation Instructions
 ------------------------
 <br>
 
-**1) Set Postgers properties:**<br>
+1) Set Postgers properties:<br>
    - Set password to “password”
    - Set username to default ("postgres")
    - Set port to default (5432)
 
 <br>
 
-**2) Unpack Glassfish to c drive**<br>
+2) Unpack Glassfish to c drive<br>
 
 <br>
 
-**3) Update Glassfish Server Configurations:**<br>
+3) Update Glassfish Server Configurations:<br>
      Overwrite domain.xml to c:\glassfish5\glassfish\domains\domain1\config
      The file exists in final_project\domain.xml
 
 <br>
 
-**4) Enable connection to the database:**<br>
-     Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
+4) Enable connection to the database:<br>
+     Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\<br>
 
 <br>
 
-**5) Update Glassfish Server Configurations:**<br>
- Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\
+5) Update Glassfish Server Configurations:<br>
+ Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\<br>
 
 <br>
 
-**5) Import project in InteliJ and build it.**<br>
-     If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations: 
-     press configure and then add your GlassFish Home directory.
+5) Import project in InteliJ and build it.<br>
+     If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br> 
+     press configure and then add your GlassFish Home directory.<br>
    
 
-**6) Deploy server:**<br>
-	- Deploy server from InteliJ by running “ServerApp” run configuration
-	- Deploy server from cmd (only after it was deployed at least once by IntelliJ): 
-		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin
-		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+6) Deploy server:
+	- Deploy server from InteliJ by running “ServerApp” run configuration<br>
+	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):<br> 
+		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin<br>
+		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.<br>
 
-<br>
 
-**7) Deploy client:**<br>
+7) Deploy client:
 	* Deploy client from InteliJ by running “ClientApp” run configuration
-	* Deploy client from cmd: 
+	* Deploy client from cmd:
  		* Build artifact clientJavaFXApp
-		* You can use Launch4j to create exe file to run the client:<br> 
-			▪ Define Output file and Jar<br>
-			▪ Define Min and Max JRE version<br>
-			▪ Select the settings icon for creating the exe<br>
+		* You can use Launch4j to create exe file to run the client:
+			▪ Define Output file and Jar
+			▪ Define Min and Max JRE version
+			▪ Select the settings icon for creating the exe
 
 
 &nbsp;
