@@ -18,13 +18,13 @@ Board games implementation in Java for Battleship and Connect 4, designated for 
 <br><br>
 
 ## System options for logged in user display
-![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)<br>
+![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
 
 ## Battleship game display 
-![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)<br>
+![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
 
 ## Connect 4 game display 
-![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)<br>
+![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)
 
 ## Game results tracking display 
 ![image](https://user-images.githubusercontent.com/124344785/225000456-6416d246-9094-4fdc-8c0f-3aaa32235776.png)
@@ -84,8 +84,8 @@ Installation Instructions
 6) Deploy server:
 	- Deploy server from InteliJ by running “ServerApp” run configuration
 	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):
-		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin
-		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+		- Run ``asadmin start-domain`` in your command line from C:\glassfish5\glassfish\bin
+		- Go to ``localhost:4848`` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 <br>
 
@@ -93,9 +93,9 @@ Installation Instructions
 	* Deploy client from InteliJ by running “ClientApp” run configuration
 	* Deploy client from cmd:
  		* Build artifact clientJavaFXApp
-		* You can use Launch4j to create exe file to run the client:
-			▪ Define Output file and Jar
-			▪ Define Min and Max JRE version
+		* You can use Launch4j to create exe file to run the client:<br>
+			▪ Define Output file and Jar<br>
+			▪ Define Min and Max JRE version<br>
 			▪ Select the settings icon for creating the exe
 
 
