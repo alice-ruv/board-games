@@ -106,7 +106,7 @@ User Manual
 **1. Connection to the System:**
    * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
-     There is a message for updating your server name or address in server URL. All the text fields and buttons will be disabled, except the "Settings" button. <br>
+     There is a message for updating your server name or address in server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
      
    * Enter "Settings" will get you to the following screen: </br></br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/275570c3-88ac-4e33-838c-d8fe69bf47f3) <br><br>
