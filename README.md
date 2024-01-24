@@ -54,56 +54,56 @@ Installation Instructions
 ------------------------
 <br>
 
-1) Set Postgers properties:<br>
+1. **Set Postgers properties:**
    - Set password to “password”
    - Set username to default ("postgres")
    - Set port to default (5432)
 
 <br>
 
-2) Unpack Glassfish to c drive
+2. **Unpack Glassfish to c drive**
 
 <br>
 
-3) Enable connection to the database:<br>
+3. **Enable connection to the database:**<br>
      Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 
 <br>
 
-4) Update Glassfish Server Configurations:<br>
- Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\
+4. **Update Glassfish Server Configurations:**<br>
+ Overwrite `domain.xml` to c:\glassfish5\glassfish\domains\domain1\config\
 
 <br>
 
-5) Import project in InteliJ and build it.<br>
+5. **Import project in InteliJ and build it.**<br>
      If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:
      press configure and then add your GlassFish Home directory.<br>
 
 <br>
 
-6) Deploy server:<br>
-	- Deploy server from InteliJ by running “ServerApp” run configuration<br>
-	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):<br>
-		- Run ``asadmin start-domain`` in your command line from C:\glassfish5\glassfish\bin<br>
-		- Go to ``localhost:4848`` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+6. **Deploy server:**
+	- Deploy server from InteliJ by running “ServerApp” run configuration
+	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):
+		- Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
+		- Go to `localhost:4848` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 <br>
 
-7) Deploy client:<br>
-	* Deploy client from InteliJ by running “ClientApp” run configuration<br>
-	* Deploy client from cmd:<br>
- 		* Build artifact clientJavaFXApp<br>
-		* You can use Launch4j to create exe file to run the client:<br>
+7. **Deploy client:**
+	- Deploy client from InteliJ by running “ClientApp” run configuration
+	- Deploy client from cmd:
+ 		- Build artifact clientJavaFXApp
+		- You can use Launch4j to create exe file to run the client:<br>
 			▪ Define Output file and Jar<br>
 			▪ Define Min and Max JRE version<br>
-			▪ Select the settings icon for creating the exe
+			▪ Select the settings icon for creating the exe<br>
 
 
 &nbsp;
 
 User Manual
 ------------
-**1) Connection to the System:**
+**1. Connection to the System:**
    * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
      There is a warning that you are connected to a distant server. All the text fields and buttons will be disabled, except the "Settings" button. <br>
@@ -114,7 +114,7 @@ User Manual
      You can get your server URL by running ``ipconfig`` on your *command line*. <br>
      If the server and the client are connected to the same WiFi network, get your server URL under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.<br><br> 
 
-**2) Entering the System:** <br>
+**2. Entering the System:** <br>
    * If the server URL is provided correctly, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br><br>
      If you're already registered, fill your username and password to enter your user account. <br><br>
