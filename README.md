@@ -65,23 +65,23 @@ Installation Instructions
 
 <br>
 
-**3) Update Glassfish Server Configurations:**
+**3) Update Glassfish Server Configurations:**<br>
      Overwrite domain.xml to c:\glassfish5\glassfish\domains\domain1\config
      The file exists in final_project\domain.xml
 
 <br>
 
-**4) Enable connection to the database:**
+**4) Enable connection to the database:**<br>
      Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 
 <br>
 
-**5) Update Glassfish Server Configurations:**
+**5) Update Glassfish Server Configurations:**<br>
  Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\
 
 <br>
 
-**5) Import project in InteliJ and build it.**
+**5) Import project in InteliJ and build it.**<br>
      If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations: 
      press configure and then add your GlassFish Home directory.
    
@@ -94,7 +94,7 @@ Installation Instructions
 
 <br>
 
-**7) Deploy client:**
+**7) Deploy client:**<br>
 	* Deploy client from InteliJ by running “ClientApp” run configuration
 	* Deploy client from cmd: 
  		* Build artifact clientJavaFXApp
