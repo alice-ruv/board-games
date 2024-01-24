@@ -65,18 +65,12 @@ Installation Instructions
 
 <br>
 
-3) Update Glassfish Server Configurations:<br>
-     Overwrite domain.xml to c:\glassfish5\glassfish\domains\domain1\config
-     The file exists in final_project\domain.xml
-
-<br>
-
-4) Enable connection to the database:<br>
+3) Enable connection to the database:<br>
      Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\<br>
 
 <br>
 
-5) Update Glassfish Server Configurations:<br>
+4) Update Glassfish Server Configurations:<br>
  Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\<br>
 
 <br>
