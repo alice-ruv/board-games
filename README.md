@@ -38,17 +38,17 @@ Installation Requirements
 
 4) JDBC Driver (Postgresql JDBC 42.4.0) <br />https://jdbc.postgresql.org/download/
 
-5)  InteliJ ultimate <br />https://www.jetbrains.com/idea/download/#section=windows
+5) InteliJ ultimate <br />https://www.jetbrains.com/idea/download/#section=windows
 
 6) Launch4j - used for creating exe file to run the client, not from IntelliJ <br />https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/
 
-►This application was tested in 1920×1080 display resolution in windows. 
+► This application was tested in 1920×1080 display resolution in windows. 
 
 
 
 Installing Instructions
 ------------------------
-1) Install Postgres
+1) Install PostgreSQL
    - set password to “password” 
    - keep port to default (5432) 
 
@@ -56,7 +56,7 @@ Installing Instructions
 
 3) Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 
-4) Overwrite domain.xml to c:\glassfish5\glassfish\domains\domain1\config\
+4) Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\
    The file exists in final_project\domain.xml
 
 5) Import project in InteliJ and build it. </br >
@@ -67,8 +67,8 @@ Installing Instructions
 6) Deploy server:
 	- Deploy server from InteliJ by running “ServerApp” run configuration
 	- Deploy server from cmd (only after it was deployed at least once by IntelliJ): 
-		- Run “asadmin start-domain” in cmd from C:\glassfish5\glassfish\bin
-		- Go to localhost:4848 in web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin
+		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 7) Deploy client:
 	* Deploy client from InteliJ by running “ClientApp” run configuration
