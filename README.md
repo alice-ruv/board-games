@@ -94,10 +94,10 @@ User Manual
      You can get your server URL by running ``ipconfig`` on your *command line*. <br />
      If the server and the client are connected to the same WiFi network, get your server URL under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.</b> 
 
-**2) Entering the System:** <br />
+**2) Using the System:** <br />
    If the server URL is provided correctly, the following screen will appear: <br /><br />
    ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br /><br />
    If you're already registered, fill your username and password to enter your user account. <br /><br />
    Otherwise, enter "Sign up" to create your own account: <br /><br />
    ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br /><br />
-   After filling in the details correctly, you will enter your [user account](system-options-for-logged-in-user-display). <br />
+   After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br />
