@@ -61,7 +61,7 @@ Installation Instructions
 
 <br>
 
-2. **Unpack Glassfish to c drive**
+2. **Unpack Glassfish to C drive**
 
 <br>
 
