@@ -54,38 +54,38 @@ Installation Instructions
 ------------------------
 <br>
 
-1) Set Postgers properties:<br>
+1) Set Postgers properties:<br/>
    - Set password to “password”
    - Set username to default ("postgres")
    - Set port to default (5432)
 
 <br>
 
-2) Unpack Glassfish to c drive<br>
+2) Unpack Glassfish to c drive
 
 <br>
 
 3) Enable connection to the database:<br>
-     Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\<br>
+     Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 
 <br>
 
 4) Update Glassfish Server Configurations:<br>
- Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\<br>
+ Overwrite ``domain.xml`` to c:\glassfish5\glassfish\domains\domain1\config\
 
 <br>
 
 5) Import project in InteliJ and build it.<br>
-     If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br> 
+     If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:
      press configure and then add your GlassFish Home directory.<br>
 
 <br>
 
 6) Deploy server:
-	- Deploy server from InteliJ by running “ServerApp” run configuration<br>
-	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):<br> 
-		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin<br>
-		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.<br>
+	- Deploy server from InteliJ by running “ServerApp” run configuration
+	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):
+		- Run ```asadmin start-domain``` in your command line from C:\glassfish5\glassfish\bin
+		- Go to ```localhost:4848``` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 
 <br>
 
