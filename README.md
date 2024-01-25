@@ -120,17 +120,20 @@ Join Game Sequence Diagram
 ```mermaid 
 sequenceDiagram
 autonumber
-JoinGameController ->> ClientGameManager: performJoinGame()
-ClientGameManager ->> GameAPI: joinGame(JoinGameRequest)
-GameAPI ->> ServerGameManager: joinGame(JoinGameRequest)
-ServerGameManager ->> DatabaseManager: joinGame(int userId, int gameTypeId)
-DatabaseManager -->> ServerGameManager: int gameId
-ServerGameManager -->> GameAPI: JoinGameResponse
-GameAPI -->> ClientGameManager: JoinGameResponse
-ClientGameManager ->> ClientGameManager: initConsumer(userId) to topic_{userId}_{gameId}
-ClientGameManager ->> GameAPI: playerReady(PlayerReadyRequest)
-GameAPI ->> ServerGameManager: playerReady(PlayerReadyRequest)
-ServerGameManager ->> DatabaseManager: updatePlayerReady(userId, gameId)
-ServerGameManager -->> ClientGameManager: sendMessage(userId, gameId, GameMessage) to topic_{userId}_{gameId}
+JoinGameController ->> ClientGameManager: performJoinGame ()
+ClientGameManager ->> GameAPI: joinGame (JoinGameRequest)
+note over ClientGameManager, GameAPI: REST API request
+GameAPI ->> ServerGameManager: joinGame (JoinGameRequest)
+ServerGameManager ->> DatabaseManager: joinGame (userId, gameTypeId)
+DatabaseManager ->> ServerGameManager: gameId
+ServerGameManager ->> GameAPI: JoinGameResponse
+GameAPI ->> ClientGameManager: JoinGameResponse
+ClientGameManager ->> ClientGameManager: initConsumer (userId) 
+note over ClientGameManager: init consumer to topic_{userId}_{gameId}
+ClientGameManager ->> GameAPI: playerReady (PlayerReadyRequest)
+GameAPI ->> ServerGameManager: playerReady (PlayerReadyRequest)
+ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
+ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessage)
+note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} from GameNetworkManager
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
