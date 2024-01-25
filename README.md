@@ -4,17 +4,17 @@ Board Games Server - Battleship & Connect 4
 
 
 #### Server side:
-* RESTful server using Glassfish application server
-* Receiving REST API requests
-* Sending messages via OpenMQ JMS broker 
-* JDBC connection to database in PostgreSQL
+* RESTful server using **Glassfish application server**
+* Receiving **REST API** requests
+* Sending messages via **OpenMQ JMS broker** 
+* **JDBC** connection to database in **PostgreSQL**
 
 
 #### Client side:
 * Sending REST API requests
-* Receiving HTTP responses
+* Receiving **HTTP** responses
 * Receiving messages using JMS API
-* UI by using JavaFX platform
+* UI by using **JavaFX** platform
 <br><br>
 
 ## System options for logged in user display
