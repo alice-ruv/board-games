@@ -126,7 +126,7 @@ ServerGameManager -> DatabaseManager: joinGame(int userId, int gameTypeId)
 DatabaseManager --> ServerGameManager: int gameId
 ServerGameManager --> GameAPI: JoinGameResponse
 GameAPI --> ClientGameManager: JoinGameResponse
-ClientGameManager -> ClientGameManager: initConsumer(userId) to topic_{userId)_{gameId)
+ClientGameManager -> ClientGameManager: initConsumer(userId) to topic_{userId}_{gameId}
 ClientGameManager -> GameAPI: playerReady(PlayerReadyRequest)
 GameAPI -> ServerGameManager: playerReady(PlayerReadyRequest)
 ServerGameManager -> DatabaseManager: updatePlayerReady(userId, gameId)
