@@ -111,4 +111,26 @@ User Manual
      If you're already registered, fill your username and password to enter your user account. <br><br>
      Otherwise, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br><br>
-   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br>
+   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br><br>
+
+*******
+
+### Join New Game Sequence Diagram
+
+```mermaid 
+sequenceDiagram
+JoinGameController -> ClientGameManager: performJoinGame()
+ClientGameManager -> GameAPI: joinGame(JoinGameRequest)
+GameAPI -> ServerGameManager: joinGame(JoinGameRequest)
+ServerGameManager -> DatabaseManager: joinGame(int userId, int gameTypeId)
+DatabaseManager --> ServerGameManager: int gameId
+ServerGameManager --> GameAPI: JoinGameResponse
+GameAPI --> ClientGameManager: JoinGameResponse
+ClientGameManager -> ClientGameManager: initConsumer(userId) to topic_{userId)_{gameId)
+ClientGameManager -> GameAPI: playerReady(PlayerReadyRequest)
+GameAPI -> ServerGameManager: playerReady(PlayerReadyRequest)
+ServerGameManager -> DatabaseManager: updatePlayerReady(userId, gameId)
+ServerGameManager --> ServerGameManager: creates GameNetworkManager instance   
+GameNetworkManager --> ClientGameManager: sendMessage(userId, gameId, GameMessage) to topic_{userId)_{gameId}
+ClientGameManager --> JoinGameController: StartGameMessage
+```
