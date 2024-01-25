@@ -120,6 +120,7 @@ Join Game Sequence Diagram
 ```mermaid 
 sequenceDiagram
 autonumber
+actor JoinGameController
 JoinGameController ->> ClientGameManager: performJoinGame ()
 ClientGameManager ->> GameAPI: joinGame (JoinGameRequest)
 note over ClientGameManager, GameAPI: REST API request
