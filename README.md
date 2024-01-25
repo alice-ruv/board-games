@@ -133,6 +133,9 @@ note over ClientGameManager: init consumer to topic_{userId}_{gameId}
 ClientGameManager ->> GameAPI: playerReady (PlayerReadyRequest)
 GameAPI ->> ServerGameManager: playerReady (PlayerReadyRequest)
 ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
+note over DatabaseManager: update user's subscription to topic with current gameId in DB
+ServerGameManager ->> DatabaseManager: startGame (GameFullData)
+note over ServerGameManager: create a new game in DB if 2 different users subscribed with the same gameId
 ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessage)
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} from GameNetworkManager
 ClientGameManager -->> JoinGameController: StartGameMessage
