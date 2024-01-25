@@ -140,4 +140,4 @@ ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessa
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} 
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
-The program allows user to play multiple games simultaneously, by subscription to topic including userId and gameId.
+The program allows user to play multiple games simultaneously, by updating subscription to topic including userId and gameId in DB.
