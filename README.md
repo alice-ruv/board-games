@@ -115,7 +115,7 @@ User Manual
 
 *******
 
-### Join New Game Sequence Diagram
+### Join Game Sequence Diagram
 
 ```mermaid 
 sequenceDiagram
