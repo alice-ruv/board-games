@@ -130,7 +130,7 @@ DatabaseManager ->> ServerGameManager: gameId
 ServerGameManager ->> GameAPI: JoinGameResponse
 GameAPI ->> ClientGameManager: JoinGameResponse
 ClientGameManager ->> ClientGameManager: initConsumer (userId) 
-note over ClientGameManager: init consumer to topic_{userId}_{gameId}
+note over ClientGameManager: init consumer with topic_{userId}_{gameId}
 ClientGameManager ->> GameAPI: playerReady (PlayerReadyRequest)
 GameAPI ->> ServerGameManager: playerReady (PlayerReadyRequest)
 ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
