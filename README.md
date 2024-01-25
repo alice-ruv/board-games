@@ -1,6 +1,6 @@
 Board Games Server - Battleship & Connect 4
 ===========================================
-#### Board games implementation in Java for Battleship and Connect 4, designated for two players with game results tracking.
+Board games implementation in Java for Battleship and Connect 4, designated for two players with game results tracking.
 
 
 #### Server side:
@@ -115,8 +115,8 @@ User Manual
 
 *******
 
-### Join Game Sequence Diagram
-
+Join Game Sequence Diagram
+--------------------------
 ```mermaid 
 sequenceDiagram
 JoinGameController -> ClientGameManager: performJoinGame()
