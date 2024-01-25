@@ -1,16 +1,16 @@
 Board Games Server - Battleship & Connect 4
 ===========================================
-Board games implementation in Java for Battleship and Connect 4, designated for two players with game results tracking.
-<br><br>
+#### Board games implementation in Java for Battleship and Connect 4, designated for two players with game results tracking.
 
-**Server side:**
+
+#### Server side:
 * RESTful server using Glassfish application server
 * Receiving REST API requests
 * Sending messages via OpenMQ JMS broker 
 * JDBC connection to database in PostgreSQL
-<br><br>
 
-**Client side:** 
+
+#### Client side:
 * Sending REST API requests
 * Receiving HTTP responses
 * Receiving messages using JMS API
@@ -28,9 +28,8 @@ Board games implementation in Java for Battleship and Connect 4, designated for 
 
 ## Game results tracking display 
 ![image](https://user-images.githubusercontent.com/124344785/225000456-6416d246-9094-4fdc-8c0f-3aaa32235776.png)
-
-************************************************************************************
-&nbsp;
+<br><br>
+*******
 
 Installation Requirements
 --------------------------
@@ -47,63 +46,55 @@ Installation Requirements
 6) Launch4j (optional) - used for creating an exe file to run the client, not from IntelliJ <br>https://sourceforge.net/projects/launch4j/files/launch4j-3/3.14/<br>
 
 ► *This application was tested in 1920×1080 display resolution in Windows.* 
-
-&nbsp;
+<br><br>
+*******
 
 Installation Instructions
 ------------------------
+
+#### 1. Set Postgers properties: 
+- Set password to ___password___
+- Set username to default (___postgres___)
+- Set port to default (___5432___)
+<br><br>
+  
+#### 2. Unpack Glassfish to C drive 
 <br>
 
-1. **Set Postgers properties:**
-   - Set password to “password”
-   - Set username to default ("postgres")
-   - Set port to default (5432)
-
+#### 3. Enable connection to the database: 
+&nbsp;&nbsp;&nbsp;&nbsp;Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
 <br>
 
-2. **Unpack Glassfish to C drive**
-
+#### 4. Update Glassfish Server Configurations: 
+&nbsp;&nbsp;&nbsp;&nbsp;Overwrite `domain.xml` to c:\glassfish5\glassfish\domains\domain1\config\
 <br>
 
-3. **Enable connection to the database:**<br>
-     Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
-
+#### 5. Import project in InteliJ and build it.
+&nbsp;&nbsp;&nbsp;&nbsp;If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;press configure and then add your GlassFish Home directory.<br>
 <br>
 
-4. **Update Glassfish Server Configurations:**<br>
- Overwrite `domain.xml` to c:\glassfish5\glassfish\domains\domain1\config\
-
+#### 6. Deploy server:
+- Deploy server from InteliJ by running “ServerApp” run configuration
+- Deploy server from cmd (only after it was deployed at least once by IntelliJ):
+    - Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
+    - Go to `localhost:4848` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
 <br>
 
-5. **Import project in InteliJ and build it.**<br>
-     If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:
-     press configure and then add your GlassFish Home directory.<br>
-
-<br>
-
-6. **Deploy server:**
-	- Deploy server from InteliJ by running “ServerApp” run configuration
-	- Deploy server from cmd (only after it was deployed at least once by IntelliJ):
-		- Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
-		- Go to `localhost:4848` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
-
-<br>
-
-7. **Deploy client:**
-	- Deploy client from InteliJ by running “ClientApp” run configuration
-	- Deploy client from cmd:
- 		- Build artifact clientJavaFXApp
-		- You can use Launch4j to create exe file to run the client:<br>
-			▪ Define Output file and Jar<br>
-			▪ Define Min and Max JRE version<br>
-			▪ Select the settings icon for creating the exe<br>
-
-
-&nbsp;
+#### 7. Deploy client:
+- Deploy client from InteliJ by running “ClientApp” run configuration
+- Deploy client from cmd:
+  - Build artifact clientJavaFXApp
+  - You can use Launch4j to create exe file to run the client:
+    - Define Output file and Jar
+    - Define Min and Max JRE version
+    - Select the settings icon for creating the exe
+<br><br>
+*******
 
 User Manual
 ------------
-**1. Connection to the System:**
+### 1. Connection to the System:
    * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
      There is a message for updating your server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
@@ -114,7 +105,7 @@ User Manual
      You can get your server address by running `ipconfig` in your *command line*. <br>
      If the server and the client are connected to the same WiFi network, get your server address under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.<br><br> 
 
-**2. Entering the System:** <br>
+### 2. Entering the System: <br>
    * If the server URL is provided correctly, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br><br>
      If you're already registered, fill your username and password to enter your user account. <br><br>
