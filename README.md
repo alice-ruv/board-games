@@ -130,7 +130,6 @@ ClientGameManager -> ClientGameManager: initConsumer(userId) to topic_{userId)_{
 ClientGameManager -> GameAPI: playerReady(PlayerReadyRequest)
 GameAPI -> ServerGameManager: playerReady(PlayerReadyRequest)
 ServerGameManager -> DatabaseManager: updatePlayerReady(userId, gameId)
-ServerGameManager --> ServerGameManager: creates GameNetworkManager instance   
-GameNetworkManager --> ClientGameManager: sendMessage(userId, gameId, GameMessage) to topic_{userId)_{gameId}
+ServerGameManager --> ClientGameManager: sendMessage(userId, gameId, GameMessage) to topic_{userId)_{gameId}
 ClientGameManager --> JoinGameController: StartGameMessage
 ```
