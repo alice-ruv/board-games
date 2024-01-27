@@ -232,7 +232,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
    
-4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks number of users waiting for a game with same gameTypeId in the database **besides the current user**:
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses gameTypeId and userId from JoinGameRequest as parameters in SQL statement, to check the number of users waiting for a game with same gameTypeId **besides the current user** in the database:
    
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
