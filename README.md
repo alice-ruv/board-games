@@ -142,7 +142,7 @@ User Manual
      If you're not registered, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
-      If one of the details provided isn't correct (missing or too long input) or if the username provided is already exist in the system, you'll get a screen message.
+      If one of the details provided isn't correct (missing or too long input) or if the username provided is already exists in the system, you'll get a screen message.
      
 &nbsp;&nbsp;
    * After filling in the details successfully, you will enter your [user account](#system-options-for-logged-in-user-display).
@@ -255,7 +255,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId as a REST API request.
+6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId in a REST API request.
    &nbsp;&nbsp;
    
    The REST API function _playerReady (PlayerReadyRequest)_, updates user's subscription to topic including userId and gameId in the database.
@@ -269,7 +269,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 7. When two different users create consumer subscribed to a topic with the same gameId updated in DB (by _playerReady_), JMSProducer created in server.
   &nbsp;&nbsp;
 
-   Now the server can interact with the client by sending messages:
+   Now the server can interact with the clients by sending messages:
    
      ```java
         String topicName = "topic" + gameId + "_" + userId;
