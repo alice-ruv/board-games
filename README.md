@@ -115,7 +115,7 @@ User Manual
 ### 1. Connection to the System
    * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
-     There is a message for updating your server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
+     There is a screen message for updating your server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
      
    * Enter "Settings" will get you to the following screen: </br></br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/275570c3-88ac-4e33-838c-d8fe69bf47f3) <br><br>
@@ -130,7 +130,7 @@ User Manual
      If you're not registered, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
-      If one of the details provided isn't correct (empty field or input is too long) or if the username is already exist in the system, you'll get a message.
+      If one of the details provided isn't correct (empty field or input is too long) or if the username is already exist in the system, you'll get a screen message.
 <br><br>
 
   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display).
@@ -221,7 +221,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
 
-   If there is no other user waiting for current game type: A new game created in database.
+   If there is no other user waiting for current game type: A new game created in the database.
    &nbsp;&nbsp;
    
    Otherwise, we change game status from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START' in the database.
@@ -248,10 +248,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-8. When two different users create consumer subscribed to a topic with the same gameId, JMSProducer created in the server.
+8. When two different users create consumer subscribed to a topic with the same gameId updated in DB (by _playerReady_), JMSProducer created in server.
   &nbsp;&nbsp;
 
-   Now the server can interact with the client by sending messages:
+   Now the server can interact with clients by sending messages:
    
      ```java
         String topicName = "topic" + gameId + "_" + userId;
