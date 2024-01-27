@@ -140,9 +140,12 @@ User Manual
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
       If one of the details provided isn't correct (missing or too long input) or if the username provided is already exist in the system, you'll get a screen message.
+     
+&nbsp;&nbsp;
+   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display).
+
 &nbsp;&nbsp;
 
-<!-- * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br><br> -->
 
 *******
 
@@ -215,6 +218,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 2. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API function:
+   
     ```java
       @POST
       @Path(/join-game)  //API endpoint
