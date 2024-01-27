@@ -66,7 +66,7 @@ Installation Instructions
 <br>
 
 #### 4. Update Glassfish Server Configurations
-&nbsp;&nbsp;&nbsp;&nbsp;Overwrite `domain.xml` to c:\glassfish5\glassfish\domains\domain1\config\
+&nbsp;&nbsp;&nbsp;&nbsp;Overwrite [domain.xml](domain.xml) to c:\glassfish5\glassfish\domains\domain1\config\
 <br>
 
 #### 5. Import project in InteliJ and build it.
