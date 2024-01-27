@@ -3,6 +3,7 @@ Board Games Server - Battleship & Connect 4
 Board games implementation in **Java** for Battleship and Connect 4, designated for two players with game results tracking.
 <br><br>
 
+<!--
 ## Table of Contents
 
 - [About the project](#about-the-project)
@@ -16,7 +17,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 *****
 ## About the project
-
+-->
 Server side:
 * RESTful server using **Glassfish application server**
 * Receiving **REST API** requests
@@ -164,8 +165,9 @@ ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessa
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} 
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
+&nbsp;&nbsp;
 
-1. When  user enter [Request to join a new game](#system-options-for-logged-in-user-display) button, it triggers an ActionEvent:
+1. When user enters _Request to join a new game_ button, it triggers an ActionEvent:
    ```java
     @FXML
     public void joinGameButtonPressed(ActionEvent ignoredEvent)
@@ -173,6 +175,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
         clientContext.changeScene("join-game.fxml");
     }
    ```
+   
+   &nbsp;&nbsp;
+   
+
    Therefore, [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) loaded from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
    ```java
       FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -182,7 +188,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    ```
      _performJoinGame()_ runs in a separate thread from _postInit_.
 
+&nbsp;&nbsp;
+
  2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates REST API request:
+    
     ```java
     Jsonb jsonb = JsonbBuilder.create();
             HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
@@ -190,8 +199,11 @@ ClientGameManager -->> JoinGameController: StartGameMessage
                     .body(jsonb.toJson(input))
                     .asString();
     ```
+    
+&nbsp;&nbsp;  
 
 3. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API function:
+   
     ```java
       @POST
       @Path(/join-game)  //API endpoint
@@ -199,28 +211,48 @@ ClientGameManager -->> JoinGameController: StartGameMessage
       @Consumes("application/json")
       public JoinGameResponse joinGame(JoinGameRequest input)
     ```
+
+&nbsp;&nbsp;
    
 4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks the number of users waiting for a game with same gameTypeId in the database **besides the current user**:
+   
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
-   If there is no other user waiting for current game type: A new game created in database.<b>
+
+   If there is no other user waiting for current game type: A new game created in database.
+   &nbsp;&nbsp;
+   
    Otherwise, we change game status from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START' in the database.
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to _topic_{gameId}_{userId}_.
+&nbsp;&nbsp;
+
+6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+   
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
       Topic topic = this.context.createTopic(topicName);
       this.gameConsumer = context.createConsumer(topic);
       ```
 
-6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest in the REST API request.<b>
-   The REST API function _playerReady (PlayerReadyRequest)_, updates user's subscription to topic including userId and gameId in the database.<b>
+&nbsp;&nbsp;
+
+7. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest in the REST API request.
+   &nbsp;&nbsp;
+   
+   The REST API function _playerReady (PlayerReadyRequest)_, updates user's subscription to topic including userId and gameId in the database.
+   &nbsp;&nbsp;
+   
    Therefore, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
 
-7. When two different users create consumer subscribed to a topic with the same gameId, JMSProducer created in the server. <b>
+&nbsp;&nbsp;
+
+8. When two different users create consumer subscribed to a topic with the same gameId, JMSProducer created in the server.
+  &nbsp;&nbsp;
+
    Now the server can interact with the client by sending messages:
+   
      ```java
         String topicName = "topic" + gameId + "_" + userId;
         Topic topic = this.context.createTopic(topicName);
