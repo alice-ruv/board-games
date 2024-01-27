@@ -10,7 +10,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
   - [Installation Requirements](#installation-requirements)
   - [Installation Instructions](#installation-instructions)
 - [User Manual](#user-manual)
-- [Join Game Sequence Diagram](#join-game-sequence-diagram)
+- [Join Game Documentation](#join-game-documentation)
   
 &nbsp;
 
@@ -132,8 +132,9 @@ User Manual
 
 *******
 
-Join Game Sequence Diagram
+Join Game Documentation
 --------------------------
+
 ```mermaid 
 sequenceDiagram
 autonumber
@@ -157,4 +158,64 @@ ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessa
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} 
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
+
+1. When  user enter "Request to join a new game" button, it triggers an ActionEvent:
+   ```java
+    @FXML
+    public void joinGameButtonPressed(ActionEvent ignoredEvent)
+    {
+        clientContext.changeScene("join-game.fxml");
+    }
+   ```
+   We load [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
+   ```java
+      FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+      root = loader.load();
+      BaseController controller = loader.getController();
+      controller.postInit(this);  // pass the context to the next controller
+   ```
+     Therefore, [performJoinGame()](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java#performJoinGame()) runs from a separate thread.
+
+ 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates REST API request from [joinGame (JoinGameRequest)](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java#joinGame):
+    ```java
+    Jsonb jsonb = JsonbBuilder.create();
+            HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
+                    .header("Content-Type", "application/json")
+                    .body(jsonb.toJson(input))
+                    .asString();
+    ```
+
+3. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API function:
+    ```java
+      @POST
+      @Path(/join-game)  //API endpoint
+      @Produces("application/json")
+      @Consumes("application/json")
+      public JoinGameResponse joinGame(JoinGameRequest input)
+      {
+          try
+          {
+              IServerGameManager gameManager = ServerGameManager.getInstance();
+              return gameManager.joinGame(input);
+          }
+          catch (GeneralErrorException e)
+          {
+              throw new InternalServerErrorException(e);
+          }
+      }
+    ```
+   
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks number of users waiting for a game with same gameTypeId in the database (besides the current user):
+   ```java
+        String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
+                "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
+   ```
+
+   5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+      ```java
+      String topicName = "topic" + this.gameId + "_" + userId;
+      Topic topic = this.context.createTopic(topicName);
+      this.gameConsumer = context.createConsumer(topic);
+      ```
+            
 The program allows user to play multiple games simultaneously, by updating subscription to topic including userId and gameId in DB.
