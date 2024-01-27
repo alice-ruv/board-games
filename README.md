@@ -142,7 +142,7 @@ User Manual
      If you're not registered, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
-      If one of the details provided isn't correct (missing or too long input) or if the username provided is already exists in the system, you'll get a screen message.
+      If one of the details provided isn't correct (missing or too long input) or if the username provided already exists in the system, you'll get a screen message.
      
 &nbsp;&nbsp;
    * After filling in the details successfully, you will enter your [user account](#system-options-for-logged-in-user-display).
