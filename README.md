@@ -145,7 +145,7 @@ User Manual
       If one of the details provided isn't correct (missing or too long input) or if the username provided is already exist in the system, you'll get a screen message.
      
 &nbsp;&nbsp;
-   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display).
+   * After filling in the details successfully, you will enter your [user account](#system-options-for-logged-in-user-display).
 
 &nbsp;&nbsp;
 
