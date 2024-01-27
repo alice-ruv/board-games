@@ -3,6 +3,20 @@ Board Games Server - Battleship & Connect 4
 Board games implementation in **Java** for Battleship and Connect 4, designated for two players with game results tracking.
 <br><br>
 
+## Table of Contents
+
+- [About the project](#about-the-project)
+- [Installation](#installation)
+- [Installation Requirements](#installation-requirements)
+- [Installation Instructions](#installation-instructions)
+- [User Manual](#user-manual)
+- [Join Game Sequence Diagram](#join-game-sequence-diagram)
+  
+&nbsp;
+
+*****
+## About the project
+
 Server side:
 * RESTful server using **Glassfish application server**
 * Receiving **REST API** requests
@@ -17,22 +31,24 @@ Client side:
 * UI by using **JavaFX** platform
 <br><br>
 
-## System options for logged in user display
+### System options for logged in user display
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
 
-## Battleship game display 
+### Battleship game display 
 ![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
 
-## Connect 4 game display 
+### Connect 4 game display 
 ![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)
 
-## Game results tracking display 
+### Game results tracking display 
 ![image](https://user-images.githubusercontent.com/124344785/225000456-6416d246-9094-4fdc-8c0f-3aaa32235776.png)
 <br><br>
 *******
 
-Installation Requirements
---------------------------
+Installation
+-------------
+### Installation Requirements
+
 1) JDK 1.8 version 8.0.202 <br>https://www.oracle.com/il-en/java/technologies/javase/javase8-archive-downloads.html
 
 2) Glassfish 5.0.0 <br>http://download.oracle.com/glassfish/5.0.1/release/java_ee_sdk-8u1.zip	
@@ -49,8 +65,7 @@ Installation Requirements
 <br><br>
 *******
 
-Installation Instructions
-------------------------
+### Installation Instructions
 
 #### 1. Set Postgers properties
 - Set password to ___password___
