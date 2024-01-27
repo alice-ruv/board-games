@@ -167,7 +167,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 ```
 &nbsp;&nbsp;
 
-1. When user enters _Request to join a new game_ button, it triggers an ActionEvent:
+1. When user enters ___Request to join a new game___ button, it triggers an ActionEvent:
    ```java
     @FXML
     public void joinGameButtonPressed(ActionEvent ignoredEvent)
@@ -221,7 +221,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
 
-   If there is no other user waiting for current game type: A new game created in the database.
+   If there is no other user waiting for current game type: a new game created in the database.
    &nbsp;&nbsp;
    
    Otherwise, we change game status from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START' in the database.
