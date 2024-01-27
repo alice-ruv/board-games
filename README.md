@@ -36,7 +36,10 @@ Client side:
 * Receiving **HTTP** responses
 * Receiving messages using JMS API
 * UI by using **JavaFX** platform
-<br><br>
+  
+&nbsp;&nbsp;
+
+*********
 
 Usage Display
 -------------
