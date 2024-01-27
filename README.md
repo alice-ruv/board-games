@@ -129,10 +129,12 @@ User Manual
      If you're not registered, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
-      If the username provided is already exist in the system, you'll get a message.
+      If one of the details provided isn't correct (empty field or input is too long) or if the username is already exist in the system, you'll get a message.
 <br><br>
 
-<!-- * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br><br> -->
+  * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display).
+    
+&nbsp;&nbsp;
 
 *******
 
@@ -163,7 +165,7 @@ note over ServerGameManager: create producer and send message to topic_{userId}_
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
 
-1. When  user enter "Request to join a new game" button, it triggers an ActionEvent:
+1. When  user enter [Request to join a new game](#system-options-for-logged-in-user-display) button, it triggers an ActionEvent:
    ```java
     @FXML
     public void joinGameButtonPressed(ActionEvent ignoredEvent)
@@ -171,16 +173,16 @@ ClientGameManager -->> JoinGameController: StartGameMessage
         clientContext.changeScene("join-game.fxml");
     }
    ```
-   We load [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
+   Therefore, [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) loaded from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
    ```java
       FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
       root = loader.load();
       BaseController controller = loader.getController();
       controller.postInit(this);  // pass the context to the next controller
    ```
-     Therefore, [performJoinGame()](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java#performJoinGame()) runs from a separate thread.
+     _performJoinGame()_ runs in a separate thread from _postInit_.
 
- 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates REST API request from [joinGame (JoinGameRequest)](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java#joinGame):
+ 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates REST API request:
     ```java
     Jsonb jsonb = JsonbBuilder.create();
             HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
@@ -198,26 +200,27 @@ ClientGameManager -->> JoinGameController: StartGameMessage
       public JoinGameResponse joinGame(JoinGameRequest input)
     ```
    
-4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks number of users waiting for a game with same gameTypeId in the database **besides the current user**:
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks the number of users waiting for a game with same gameTypeId in the database **besides the current user**:
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
-   If there is no other user waiting for current game type: A new game created in database.
-   Otherwise, we change the game status to 'READY_TO_START' in the database.
+   If there is no other user waiting for current game type: A new game created in database.<b>
+   Otherwise, we change game status from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START' in the database.
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to _topic_{gameId}_{userId}_.
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
       Topic topic = this.context.createTopic(topicName);
       this.gameConsumer = context.createConsumer(topic);
       ```
 
-6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId as a REST API request.
-   The REST API function playerReady (PlayerReadyRequest), updates user's subscription to topic including userId and gameId in DB.<b>
-   By updating this subscription in the database, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
+6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest in the REST API request.<b>
+   The REST API function _playerReady (PlayerReadyRequest)_, updates user's subscription to topic including userId and gameId in the database.<b>
+   Therefore, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
 
-7. When two different users created a consumer subscribed to a topic with the same gameId, JMSProducer created in the server. Now the server can interact with the client by sending messages:
+7. When two different users create consumer subscribed to a topic with the same gameId, JMSProducer created in the server. <b>
+   Now the server can interact with the client by sending messages:
      ```java
         String topicName = "topic" + gameId + "_" + userId;
         Topic topic = this.context.createTopic(topicName);
