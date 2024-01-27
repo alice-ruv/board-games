@@ -125,10 +125,14 @@ User Manual
 ### 2. Entering the System <br>
    * If the server URL is provided correctly, the following screen will appear: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br><br>
-     If you're already registered, fill your username and password to enter your user account. <br><br>
-     Otherwise, enter "Sign up" to create your own account: <br><br>
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br><br>
-   * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br><br>
+
+     If you're not registered, enter "Sign up" to create your own account: <br><br>
+     ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
+
+      If the username provided is already exist in the system, you'll get a message.
+<br><br>
+
+<!-- * After filling in the details correctly, you will enter your [user account](#system-options-for-logged-in-user-display). <br><br> -->
 
 *******
 
@@ -210,10 +214,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
       ```
 
 6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId as a REST API request.
-   The REST API function playerReady (PlayerReadyRequest), updates user's subscription to topic including userId and gameId in DB.
+   The REST API function playerReady (PlayerReadyRequest), updates user's subscription to topic including userId and gameId in DB.<b>
    By updating this subscription in the database, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
 
-7. When two different users created a consumer subscribed to a topic with the same gameId, JMSProducer created in the server. No the server can interact with the client by sending messages:
+7. When two different users created a consumer subscribed to a topic with the same gameId, JMSProducer created in the server. Now the server can interact with the client by sending messages:
      ```java
         String topicName = "topic" + gameId + "_" + userId;
         Topic topic = this.context.createTopic(topicName);
