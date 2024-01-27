@@ -7,8 +7,8 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 - [About the project](#about-the-project)
 - [Installation](#installation)
-- [Installation Requirements](#installation-requirements)
-- [Installation Instructions](#installation-instructions)
+  - [Installation Requirements](#installation-requirements)
+  - [Installation Instructions](#installation-instructions)
 - [User Manual](#user-manual)
 - [Join Game Sequence Diagram](#join-game-sequence-diagram)
   
@@ -67,6 +67,8 @@ Installation
 
 ### Installation Instructions
 
+&nbsp;
+  
 #### 1. Set Postgers properties
 - Set password to ___password___
 - Set username to default (___postgres___)
@@ -84,7 +86,7 @@ Installation
 &nbsp;&nbsp;&nbsp;&nbsp;Overwrite `domain.xml` to c:\glassfish5\glassfish\domains\domain1\config\
 <br>
 
-#### 5. Import project in InteliJ and build it.
+#### 5. Import project in InteliJ and build it
 &nbsp;&nbsp;&nbsp;&nbsp;If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;press configure and then add your GlassFish Home directory.<br>
 <br>
