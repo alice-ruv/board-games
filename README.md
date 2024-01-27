@@ -266,7 +266,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-7. When two different users create consumer subscribed to a topic with the same gameId updated in DB (by _playerReady_), JMSProducer created in server
+7. When two different users create consumer subscribed to a topic with the same gameId updated in DB (by _playerReady_), JMSProducer created in server.
   &nbsp;&nbsp;
 
    Now the server can interact with the client by sending messages:
