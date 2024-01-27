@@ -182,7 +182,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-1. When  user enter "Request to join a new game" button, it triggers an ActionEvent:
+1. When user enters "Request to join a new game" button, it triggers an ActionEvent:
    
    ```java
     @FXML
