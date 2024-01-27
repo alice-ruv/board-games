@@ -192,30 +192,30 @@ ClientGameManager -->> JoinGameController: StartGameMessage
       @Produces("application/json")
       @Consumes("application/json")
       public JoinGameResponse joinGame(JoinGameRequest input)
-      {
-          try
-          {
-              IServerGameManager gameManager = ServerGameManager.getInstance();
-              return gameManager.joinGame(input);
-          }
-          catch (GeneralErrorException e)
-          {
-              throw new InternalServerErrorException(e);
-          }
-      }
     ```
    
-4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks number of users waiting for a game with same gameTypeId in the database (besides the current user):
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) checks number of users waiting for a game with same gameTypeId in the database **besides the current user**:
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
+   If there is no other user waiting for current game type: A new game created in database.
+   Otherwise, we change the game status to 'READY_TO_START' in the database.
 
-   5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
       Topic topic = this.context.createTopic(topicName);
       this.gameConsumer = context.createConsumer(topic);
       ```
-            
-The program allows user to play multiple games simultaneously, by updating subscription to topic including userId and gameId in DB.
+
+6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId as a REST API request.
+   The REST API function playerReady (PlayerReadyRequest), updates user's subscription to topic including userId and gameId in DB.
+   By updating this subscription in the database, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
+
+7. When two different users created a consumer subscribed to a topic with the same gameId, JMSProducer created in the server. No the server can interact with the client by sending messages:
+     ```java
+        String topicName = "topic" + gameId + "_" + userId;
+        Topic topic = this.context.createTopic(topicName);
+        this.context.createProducer().send(topic, gameMessage);
+     ```
