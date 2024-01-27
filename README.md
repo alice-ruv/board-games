@@ -238,7 +238,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
-   If the result is empty, there is no other user waiting for current game type: a new game created in database.
+   If the result is empty, there is no other user waiting for current game type: a new game created in the database.
    &nbsp;&nbsp;
    
    Otherwise, we change the game status to 'READY_TO_START' in the database.
