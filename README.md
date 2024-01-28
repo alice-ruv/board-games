@@ -255,10 +255,14 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-6. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) sends PlayerReadyRequest including userId and gameId in a REST API request.
+6. ClientGameManager sends PlayerReadyRequest including userId and gameId in a REST API request.
    &nbsp;&nbsp;
+
+   [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in SQL statement, to update user's subscription to the topic in the database:
    
-   The REST API function _playerReady (PlayerReadyRequest)_, updates user's subscription to topic including userId and gameId in the database.
+   ```java
+        String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id=? AND game_id=?";
+   ```
    &nbsp;&nbsp;
    
    Therefore, we allow user to play multiple games simultaneously, so he can create a new topic with different gameId for every game.
@@ -266,7 +270,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-7. When two different users create consumer subscribed to a topic with the same gameId updated in DB (by _playerReady_), JMSProducer created in server.
+7. When two different users create consumer subscribed to a topic with the same gameId updated in DB, JMSProducer created in server.
   &nbsp;&nbsp;
 
    Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
