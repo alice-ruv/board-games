@@ -270,10 +270,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-7. When two different users create consumer subscribed to a topic with the same gameId updated in DB, JMSProducer created in server.
+7. [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame(GameFullData)_ if two different users created consumer subscribed to a topic with the same gameId updated in DB.
   &nbsp;&nbsp;
 
-   Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
+   Therefore, JMSProducer created in server. Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
    
      ```java
         String topicName = "topic" + gameId + "_" + userId;
