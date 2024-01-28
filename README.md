@@ -8,14 +8,14 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 - [Description](#description)
 - [Usage Display](#usage-display)
-  - [System Options for Logged In User Display](#system-options-for-logged-in-user-display)
-  - [Battleship Game Display](#battleship-game-display)  
-  - [Connect 4 Game Display](#connect-4-game-display)
-  - [Game Results Tracking Display](#game-results-tracking-display) 
+  - [System Options for Logged In User](#system-options-for-logged-in-user)
+  - [Battleship Game](#battleship-game)  
+  - [Connect 4 Game](#connect-4-game)
+  - [Game Results Tracking](#game-results-tracking) 
 - [Installation](#installation)
   - [Installation Requirements](#installation-requirements)
   - [Installation Instructions](#installation-instructions)
-- [User Manual](#user-manual)
+- [Configuration](#configuration)
 - [Join Game Documentation](#join-game-documentation)
 
 &nbsp;
@@ -44,16 +44,16 @@ Client side:
 Usage Display
 -------------
 
-### System Options for Logged In User Display
+### System Options for Logged In User
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
 
-### Battleship Game Display
+### Battleship Game 
 ![image](https://user-images.githubusercontent.com/124344785/224998117-66f9753f-0967-41c8-9bda-0535541fd330.png)
 
-### Connect 4 Game Display 
+### Connect 4 Game 
 ![image](https://user-images.githubusercontent.com/124344785/224998858-836b9407-976e-4fe2-a23a-cdb9dafd5e1e.png)
 
-### Game Results Tracking Display 
+### Game Results Tracking 
 ![image](https://user-images.githubusercontent.com/124344785/225000456-6416d246-9094-4fdc-8c0f-3aaa32235776.png)
 <br><br>
 *******
@@ -122,30 +122,26 @@ Installation
 <br><br>
 *******
 
-User Manual
-------------
-### 1. Connection to the System
-   * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
-     There is a screen message for updating your server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
-     
-   * Enter "Settings" will get you to the following screen: </br></br>
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/275570c3-88ac-4e33-838c-d8fe69bf47f3) <br><br>
-     As a default, the server URL is set to localhost. Update your server name or address in server URL and press "Save". <br>
-     You can get your server address by running `ipconfig` in your *command line*. <br>
-     If the server and the client are connected to the same WiFi network, get your server address under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.<br><br> 
+Configuration
+--------------
+* If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
+ ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
+ There is a screen message for updating your server URL. All the text fields and buttons are disabled, except the "Settings" button. <br>
+ 
+* Enter "Settings" will get you to the following screen: </br></br>
+ ![image](https://github.com/alice-ruv/board-games/assets/124344785/275570c3-88ac-4e33-838c-d8fe69bf47f3) <br><br>
+ As a default, the server URL is set to localhost. Update your server name or address in server URL and press "Save". <br><br>
+ You can get your server address by running `ipconfig` in your *command line*. <br>
+ If the server and the client are connected to the same WiFi network, get your server address under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.<br><br>
 
-### 2. Entering the System <br>
-   * If the server URL is provided correctly, the following screen will appear: <br><br>
-     ![image](https://github.com/alice-ruv/board-games/assets/124344785/945c7421-ad44-461d-bc86-56ada389aa00) <br><br>
 
+<!--
      If you're not registered, enter "Sign up" to create your own account: <br><br>
      ![image](https://github.com/alice-ruv/board-games/assets/124344785/38a1bcac-9f21-46a1-a827-3c6486c0f894) <br> 
 
       If one of the details provided isn't correct (missing or too long input) or if the username provided already exists in the system, you'll get a screen message.
      
-&nbsp;&nbsp;
-   * After filling in the details successfully, you will enter your [user account](#system-options-for-logged-in-user-display).
+-->
 
 &nbsp;&nbsp;
 
