@@ -6,7 +6,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 ## Table of Contents
 
-- [Description](#description)
+- [Overview](#overview)
 - [Usage Display](#usage-display)
   - [System Options for Logged In User](#system-options-for-logged-in-user)
   - [Battleship Game](#battleship-game)  
@@ -22,7 +22,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 *****
 
-## Description
+## Overview
 
 Server side:
 * RESTful server using **Glassfish application server**
