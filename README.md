@@ -251,7 +251,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-6. ClientGameManager calls REST API function by running _playerReady (PlayerReadyRequest)_.
+6. ClientGameManager creates another REST API request by running _playerReady (PlayerReadyRequest)_.
    &nbsp;&nbsp;
 
    [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in SQL statement, to update user's subscription to the topic in the database:
