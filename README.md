@@ -257,7 +257,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in SQL statement, to update user's subscription to the topic in the database:
    
    ```java
-        String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id=? AND game_id=?";
+        String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id = ? AND game_id = ?";
    ```
    &nbsp;&nbsp;
    
@@ -266,7 +266,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 &nbsp;&nbsp;
 
 
-7. If two different users updated their subscription with the same gameId in DB,  [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame(GameFullData)_.
+7. If two different users updated their subscription with the same gameId in DB,  [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame (GameFullData)_.
 
      Therefore, JMSProducer created in server. Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
    
