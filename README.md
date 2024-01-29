@@ -108,7 +108,7 @@ Installation
 - Deploy server from InteliJ by running “ServerApp” run configuration
 - Deploy server from cmd (only after it was deployed at least once by IntelliJ):
     - Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
-    - Go to `localhost:4848` in your web browser, select Applications and then on BoardGamesServer-v1 row select Launch.
+    - Go to `localhost:4848` in your web browser, select Applications and then on "BoardGamesServer-v1" row select "Launch"
 <br>
 
 #### 7. Deploy client
@@ -150,7 +150,11 @@ Configuration
 
 Join Game Documentation
 --------------------------
-Joining a game triggers the core functionalities on both the client and server sides, which are outlined in the project [overview](#overview). This documentation illustrates the primary workflow, involving interactions between the client and server, through the use of a sequence diagram accompanied by detailed explanations:
+Joining a game triggers the core functionalities on both the client and server sides, which are outlined in the project [overview](#overview). 
+&nbsp;
+
+This documentation illustrates the primary workflow, involving interactions between the client and server, through the use of a sequence diagram accompanied by detailed explanations:
+&nbsp;
 
 ```mermaid 
 sequenceDiagram
