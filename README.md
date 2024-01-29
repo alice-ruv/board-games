@@ -241,7 +241,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId as a JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId from JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
    
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
