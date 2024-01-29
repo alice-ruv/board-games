@@ -33,7 +33,6 @@ Server side:
 
 Client side:
 * Sending REST API requests
-* Receiving **HTTP** responses
 * Receiving messages using JMS API
 * UI by using **JavaFX** platform
   
