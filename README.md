@@ -281,3 +281,19 @@ ClientGameManager -->> JoinGameController: StartGameMessage
      ```
 
      [StartGameMessage](BoardGames/common/src/main/java/common/StartGameMessage.java) is sent back to the client.
+   
+&nbsp;&nbsp;
+
+<!--
+*****************
+
+Features
+-------------
+
+- **Simultaneous Multi-Game Play:**
+  Users can enjoy the flexibility of playing multiple games simultaneously, managing and switching between game sessions seamlessly, as explained in section 6 in [Join Game Documentation](#join-game-documentation)
+  
+- **Automatic Game Termination on Inactivity:**
+  Utilizes a `ScheduledExecutorService` in [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) to automatically end games that have been idle for a specified duration, ensuring efficient resource usage and preventing indefinite idle states.
+
+-->
