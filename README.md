@@ -212,7 +212,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
     
     ```java
     Jsonb jsonb = JsonbBuilder.create();
-    HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
+    HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))  // API endpoint usage
             .header("Content-Type", "application/json")
             .body(jsonb.toJson(input))
             .asString();
@@ -224,7 +224,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    
     ```java
       @POST
-      @Path(/join-game)  //API endpoint
+      @Path(/join-game)  // API endpoint declaration
       @Produces("application/json")
       @Consumes("application/json")
       public JoinGameResponse joinGame(JoinGameRequest input)
