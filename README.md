@@ -208,10 +208,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
     
     ```java
     Jsonb jsonb = JsonbBuilder.create();
-            HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
-                    .header("Content-Type", "application/json")
-                    .body(jsonb.toJson(input))
-                    .asString();
+    HttpResponse<String> apiResponse = Unirest.post(getUrl(/join-game))
+            .header("Content-Type", "application/json")
+            .body(jsonb.toJson(input))
+            .asString();
     ```
 
 &nbsp;&nbsp;
