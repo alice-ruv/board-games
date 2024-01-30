@@ -194,7 +194,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    &nbsp;&nbsp;
 
 
-   Therefore, [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) loaded from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
+   Therefore, [JoinGameController](BoardGames/BoardGamesClient/src/main/java/client/controllers/JoinGameController.java) is loaded from [ClientContext](BoardGames/BoardGamesClient/src/main/java/client/ClientContext.java):
    
     ```java
        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -208,7 +208,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
- 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates REST API request:
+ 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates a REST API request:
     
     ```java
     Jsonb jsonb = JsonbBuilder.create();
@@ -245,14 +245,12 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs __initConsumer (gameId)__.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs _initConsumer (gameId)_.
 &nbsp;&nbsp;
 
-    `JMSContext` context is created from the `ConnectionFactory` and then used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` topic_{gameId}_{userId}.
+    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` topic_{gameId}_{userId}.
    
       ```java
-      this.context = connectionFactory.createContext();
-      this.context.setClientID("client_" + userId + java.util.UUID.randomUUID());
       String topicName = "topic" + this.gameId + "_" + userId;
       Topic topic = this.context.createTopic(topicName);
       this.gameConsumer = this.context.createConsumer(topic);
