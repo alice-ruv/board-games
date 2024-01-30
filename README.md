@@ -208,7 +208,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
- 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates a REST API request using the HTTP POST method and sends it to the server for further processing:
+ 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates a `REST API` request using the HTTP POST method and sends it to the server for further processing:
     
     ```java
     Jsonb jsonb = JsonbBuilder.create();
@@ -232,13 +232,13 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
    
-4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses gameTypeId and userId from JoinGameRequest as parameters in SQL statement, to check the number of users waiting for the same game type **besides the current user** in the database:
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses gameTypeId and userId from JoinGameRequest as parameters in the SQL statement, to verify if a new game has been created for the current user in the database:
    
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
                 "WHERE game_type_id = ? AND status = 'WAIT_FOR_ALL_PLAYERS' AND u.user_id <> ? LIMIT 1";
    ```
-   A JDBC connection is established to execute the query and obtain a result set.
+   A `JDBC connection` is established to execute the query and obtain a result set.
    &nbsp;&nbsp;
    
    If the result is empty, there is no other user waiting for current game type: a new game created in the database.
@@ -251,7 +251,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs _initConsumer (gameId)_.
 &nbsp;&nbsp;
 
-    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` named topic_{gameId}_{userId}.
+    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to a `Topic` destination named topic_{gameId}_{userId}.
    
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
@@ -278,7 +278,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 7. If two different users updated their subscription with the same gameId in DB,  [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame (GameFullData)_.
 
-     Therefore, JMSProducer created in server. Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
+     Therefore, `JMSProducer` created in server. Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
    
      ```java
         String topicName = "topic" + gameId + "_" + userId;
