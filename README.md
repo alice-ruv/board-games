@@ -248,7 +248,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs _initConsumer (gameId)_.
 &nbsp;&nbsp;
 
-    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` topic_{gameId}_{userId}.
+    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` named topic_{gameId}_{userId}.
    
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
