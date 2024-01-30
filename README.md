@@ -182,7 +182,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-1. When user enters "Request to join a new game" button, it triggers an ActionEvent:
+1. When the user presses the "Request to join a new game" button, it triggers an ActionEvent:
    
    ```java
     @FXML
@@ -245,12 +245,17 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) gets gameId from JoinGameResponse and creates JMSConsumer, subscribed to topic_{gameId}_{userId}.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs __initConsumer (gameId)__.
+&nbsp;&nbsp;
+
+    `JMSContext` context is created from the `ConnectionFactory` and then used to create a `JMSConsumer` gameConsumer, subscribed to `Topic` topic_{gameId}_{userId}.
    
       ```java
+      this.context = connectionFactory.createContext();
+      this.context.setClientID("client_" + userId + java.util.UUID.randomUUID());
       String topicName = "topic" + this.gameId + "_" + userId;
       Topic topic = this.context.createTopic(topicName);
-      this.gameConsumer = context.createConsumer(topic);
+      this.gameConsumer = this.context.createConsumer(topic);
       ```
 &nbsp;&nbsp;
 
