@@ -241,10 +241,10 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    A `JDBC connection` is established to execute the query and obtain a result set.
    &nbsp;&nbsp;
    
-   If the result is empty, there is no other user waiting for current game type: a new game created in the database.
+   If the result is empty, indicating that no other user is waiting for the current game type, a new game will be created in the database.
    &nbsp;&nbsp;
    
-   Otherwise, we change the game status from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START'.
+   Otherwise, the game status will transition from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START'.
 
 &nbsp;&nbsp;
 
@@ -264,7 +264,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 6. ClientGameManager creates another REST API request by running _playerReady (PlayerReadyRequest)_.
    &nbsp;&nbsp;
 
-   [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in SQL statement, to update user's subscription to the topic in the database:
+   [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in the SQL statement, to update user's subscription status to the topic in the database:
    
    ```java
         String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id = ? AND game_id = ?";
