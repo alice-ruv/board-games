@@ -208,7 +208,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
- 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates a REST API request:
+ 2. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) creates a REST API request using the HTTP POST method:
     
     ```java
     Jsonb jsonb = JsonbBuilder.create();
@@ -220,7 +220,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-3. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API function:
+3. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API POST method:
    
     ```java
       @POST
