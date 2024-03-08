@@ -140,10 +140,9 @@ Configuration
 
 Join Game Documentation
 --------------------------
-Joining a game triggers the core functionalities on both the client and server sides, which are outlined in the project [overview](#overview). 
-&nbsp;
-
-This documentation illustrates the primary workflow, involving interactions between the client and server, through the use of a sequence diagram accompanied by detailed explanations:
+Joining a game triggers the core functionalities on both the client and server sides. 
+<br>
+This documentation illustrates the primary workflow through the use of a sequence diagram accompanied by detailed explanations:
 &nbsp;
 
 ```mermaid 
