@@ -2,11 +2,22 @@ Board Games Server - Battleship & Connect 4
 ===========================================
 
 Board games implementation in **Java** for Battleship and Connect 4, designated for two players with game results tracking.
-<br><br>
+<br>
 
-## Table of Contents
+### Server side:
+* RESTful server using **Glassfish application server**
+* Receiving and handling incoming **REST API** requests
+* Sending messages to a **JMS destination** managed by the **OpenMQ broker** 
+* Communicating with the **PostgreSQL** database using **JDBC** connections  
+  
+### Client side:
+* Sending REST API requests through standard HTTP methods
+* Receiving messages from a JMS destination
+* Providing a UI using **JavaFX** platform
+&nbsp;
+  
+------------------------------------------------
 
-- [Overview](#overview)
 - [Usage Display](#usage-display)
   - [System Options for Logged In User](#system-options-for-logged-in-user)
   - [Battleship Game](#battleship-game)  
@@ -16,30 +27,9 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
   - [Installation Requirements](#installation-requirements)
   - [Installation Instructions](#installation-instructions)
 - [Configuration](#configuration)
-- [Join Game Documentation](#join-game-documentation)
+- [Join Game Documentation](#join-game-documentation)  
 
-&nbsp;
-
-*****
-
-## Overview
-
-  
-#### Server side:
-* RESTful server using **Glassfish application server**
-* Receiving and handling incoming **REST API** requests
-* Sending messages to a **JMS destination** managed by the **OpenMQ broker** 
-* Communicating with the **PostgreSQL** database using **JDBC** connections
-  
-  
-#### Client side:
-* Sending REST API requests through standard HTTP methods
-* Receiving messages from a JMS destination
-* Providing a UI using **JavaFX** platform
-  
-&nbsp;&nbsp;
-
-*********
+**********************************************************
 
 Usage Display
 -------------
