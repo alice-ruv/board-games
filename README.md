@@ -19,6 +19,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 ------------------------------------------------
 
 - [Usage Display](#usage-display)
+  - [Creating a Member Account](#creating-a-member-account)
   - [System Options for Logged In User](#system-options-for-logged-in-user)
   - [Battleship Game](#battleship-game)  
   - [Connect 4 Game](#connect-4-game)
@@ -33,6 +34,8 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 
 Usage Display
 -------------
+### Creating a Member Account
+![image](https://github.com/alice-ruv/board-games/assets/124344785/a5fc5a5e-9bb0-4b66-98bc-490fd560b446)
 
 ### System Options for Logged In User
 ![image](https://user-images.githubusercontent.com/124344785/225001584-4d178307-0983-479a-800f-5b5d397b5adf.png)
