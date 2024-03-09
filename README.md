@@ -27,7 +27,7 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 - [Installation](#installation)
   - [Installation Requirements](#installation-requirements)
   - [Installation Instructions](#installation-instructions)
-- [Configuration](#configuration)
+- [Server URL Configuration](#server-url-configuration)
 - [Join Game Documentation](#join-game-documentation)  
 
 **********************************************************
@@ -115,7 +115,7 @@ Installation
 <br><br>
 *******
 
-Configuration
+Server URL Configuration
 --------------
 * If the server and the client aren't running in the same machine, the following screen will appear: <br><br>
  ![image](https://github.com/alice-ruv/board-games/assets/124344785/a91a95f6-35f5-45f8-a3a8-3560139a7fdb) <br><br>
