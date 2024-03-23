@@ -99,6 +99,7 @@ Installation
 
 #### 6. Deploy server
 - Deploy server from InteliJ by running “ServerApp” run configuration
+  - [Run/Debug Configuration: GlassFish Server](https://www.jetbrains.com/help/idea/run-debug-configuration-glassfish-server.html)
 - Deploy server from cmd (only after it was deployed at least once by IntelliJ):
     - Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
     - Go to `localhost:4848` in your web browser, select Applications and then on "BoardGamesServer-v1" row select "Launch"
