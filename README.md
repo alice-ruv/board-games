@@ -153,17 +153,17 @@ sequenceDiagram
 autonumber
 actor JoinGameController
 JoinGameController ->> ClientGameManager: performJoinGame ()
-ClientGameManager ->> GameAPI: joinGame (JoinGameRequest)
+ClientGameManager ->> GameApi: joinGame (JoinGameRequest)
 note over ClientGameManager, GameAPI: REST API request
-GameAPI ->> ServerGameManager: joinGame (JoinGameRequest)
+GameApi ->> ServerGameManager: joinGame (JoinGameRequest)
 ServerGameManager ->> DatabaseManager: joinGame (userId, gameTypeId)
 DatabaseManager ->> ServerGameManager: gameId
-ServerGameManager ->> GameAPI: JoinGameResponse
-GameAPI ->> ClientGameManager: JoinGameResponse
+ServerGameManager ->> GameApi: JoinGameResponse
+GameApi ->> ClientGameManager: JoinGameResponse
 ClientGameManager ->> ClientGameManager: initConsumer (userId) 
 note over ClientGameManager: init consumer with topic_{userId}_{gameId}
-ClientGameManager ->> GameAPI: playerReady (PlayerReadyRequest)
-GameAPI ->> ServerGameManager: playerReady (PlayerReadyRequest)
+ClientGameManager ->> GameApi: playerReady (PlayerReadyRequest)
+GameApi ->> ServerGameManager: playerReady (PlayerReadyRequest)
 ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
 note over DatabaseManager: update user's subscription to topic with current gameId in DB
 note over DatabaseManager: start game if 2 different users subscribed with the same gameId
@@ -212,7 +212,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
 
 &nbsp;&nbsp;
 
-3. [GameAPI](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API POST method:
+3. [GameApi](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/GameApi.java) defines the REST API POST method:
    
     ```java
       @POST
