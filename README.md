@@ -154,7 +154,7 @@ autonumber
 actor JoinGameController
 JoinGameController ->> ClientGameManager: performJoinGame ()
 ClientGameManager ->> GameApi: joinGame (JoinGameRequest)
-note over ClientGameManager, GameAPI: REST API request
+note over ClientGameManager, GameApi: REST API request
 GameApi ->> ServerGameManager: joinGame (JoinGameRequest)
 ServerGameManager ->> DatabaseManager: joinGame (userId, gameTypeId)
 DatabaseManager ->> ServerGameManager: gameId
