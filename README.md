@@ -157,9 +157,9 @@ ClientGameManager ->> GameApi: joinGame (JoinGameRequest)
 note over ClientGameManager, GameApi: REST API request
 GameApi ->> ServerGameManager: joinGame (JoinGameRequest)
 ServerGameManager ->> DatabaseManager: joinGame (userId, gameTypeId)
-DatabaseManager ->> ServerGameManager: gameId
-ServerGameManager ->> GameApi: JoinGameResponse
-GameApi ->> ClientGameManager: JoinGameResponse
+DatabaseManager -->> ServerGameManager: gameId
+ServerGameManager -->> GameApi: JoinGameResponse
+GameApi -->> ClientGameManager: JoinGameResponse
 ClientGameManager ->> ClientGameManager: initConsumer (userId) 
 note over ClientGameManager: init consumer with topic_{userId}_{gameId}
 ClientGameManager ->> GameApi: playerReady (PlayerReadyRequest)
@@ -167,7 +167,7 @@ GameApi ->> ServerGameManager: playerReady (PlayerReadyRequest)
 ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
 note over DatabaseManager: update user's subscription to topic with current gameId in DB
 note over DatabaseManager: start game if 2 different users subscribed with the same gameId
-ServerGameManager -->> ClientGameManager: sendMessage (userId, gameId, GameMessage)
+ServerGameManager -) ClientGameManager: sendMessage (userId, gameId, GameMessage)
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} 
 ClientGameManager -->> JoinGameController: StartGameMessage
 ```
