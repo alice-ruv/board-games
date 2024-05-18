@@ -157,7 +157,9 @@ ClientGameManager ->> GameApi: joinGame (JoinGameRequest)
 note over ClientGameManager, GameApi: REST API request
 GameApi ->> ServerGameManager: joinGame (JoinGameRequest)
 ServerGameManager ->> DatabaseManager: joinGame (userId, gameTypeId)
+activate DatabaseManager
 DatabaseManager -->> ServerGameManager: gameId
+deactivate DatabaseManager
 ServerGameManager -->> GameApi: JoinGameResponse
 GameApi -->> ClientGameManager: JoinGameResponse
 ClientGameManager ->> ClientGameManager: initConsumer (userId) 
@@ -165,11 +167,23 @@ note over ClientGameManager: init consumer with topic_{userId}_{gameId}
 ClientGameManager ->> GameApi: playerReady (PlayerReadyRequest)
 GameApi ->> ServerGameManager: playerReady (PlayerReadyRequest)
 ServerGameManager ->> DatabaseManager: updatePlayerReady (userId, gameId)
+activate ServerGameManager
 note over DatabaseManager: update user's subscription to topic with current gameId in DB
-note over DatabaseManager: start game if 2 different users subscribed with the same gameId
+critical start game if 2 different users subscribed with the same gameId
 ServerGameManager -) ClientGameManager: sendMessage (userId, gameId, GameMessage)
+deactivate ServerGameManager
 note over ServerGameManager: create producer and send message to topic_{userId}_{gameId} 
 ClientGameManager -->> JoinGameController: StartGameMessage
+end
+box rgba(100, 100, 100, .2) Client
+participant JoinGameController
+participant ClientGameManager
+end
+box rgba(100, 100, 100, .2) Server
+participant GameApi
+participant ServerGameManager
+participant DatabaseManager
+end
 ```
 
 &nbsp;&nbsp;
@@ -178,8 +192,7 @@ ClientGameManager -->> JoinGameController: StartGameMessage
    
    ```java
     @FXML
-    public void joinGameButtonPressed(ActionEvent ignoredEvent)
-    {
+    public void joinGameButtonPressed(ActionEvent ignoredEvent) {
         clientContext.changeScene("join-game.fxml");
     }
    ```
@@ -219,7 +232,15 @@ ClientGameManager -->> JoinGameController: StartGameMessage
       @Path(/join-game)  // API endpoint declaration
       @Produces("application/json")
       @Consumes("application/json")
-      public JoinGameResponse joinGame(JoinGameRequest input)
+      public JoinGameResponse joinGame(JoinGameRequest input) {
+        try {
+            IServerGameManager gameManager = ServerGameManager.getInstance();
+            return gameManager.joinGame(input);
+        }
+        catch (GeneralErrorException e) {
+            throw new InternalServerErrorException(e);
+        }
+     }
     ```
 
 &nbsp;&nbsp;
