@@ -14,6 +14,11 @@ Board games implementation in **Java** for Battleship and Connect 4, designated 
 * Sending REST API requests through standard HTTP methods
 * Receiving messages from a JMS destination
 * Providing a UI using **JavaFX** platform
+
+&nbsp;
+
+![image](https://github.com/user-attachments/assets/6df2a878-5ac3-4754-99b1-7249c25e8b31)
+
 &nbsp;
   
 ------------------------------------------------
