@@ -252,7 +252,7 @@ end
 
 &nbsp;&nbsp;
    
-4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses gameTypeId and userId from JoinGameRequest as parameters in the SQL statement, to verify if a new game has been created for the current user in the database:
+4. [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses _gameTypeId_ and _userId_ from _JoinGameRequest_ as parameters in the SQL statement, to verify if a new game has been created for the current user in the database:
    
    ```java
         String sql = "SELECT g.game_id FROM game g JOIN user_game u ON g.game_id = u.game_id " +
@@ -264,14 +264,14 @@ end
    If the result is empty, indicating that no other user is waiting for the current game type, a new game will be created in the database.
    &nbsp;&nbsp;
    
-   Otherwise, the game status will transition from 'WAIT_FOR_ALL_PLAYERS' to 'READY_TO_START'.
+   Otherwise, the game status will transition from _'WAIT_FOR_ALL_PLAYERS'_ to _'READY_TO_START'_.
 
 &nbsp;&nbsp;
 
-5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves gameId from JoinGameResponse and runs _initConsumer (gameId)_.
+5. [ClientGameManager](BoardGames/BoardGamesClient/src/main/java/client/ClientGameManager.java) retrieves _gameId_ from _JoinGameResponse_ and runs _initConsumer (gameId)_.
 &nbsp;&nbsp;
 
-    `JMSContext` context is used to create a `JMSConsumer` gameConsumer, subscribed to a `Topic` destination named topic_{gameId}_{userId}.
+    `JMSContext` context is used to create a `JMSConsumer` _gameConsumer_, subscribed to a `Topic` destination named *topic_{gameId}_{userId}*.
    
       ```java
       String topicName = "topic" + this.gameId + "_" + userId;
@@ -281,10 +281,10 @@ end
 &nbsp;&nbsp;
 
 
-6. ClientGameManager creates another REST API request by running _playerReady (PlayerReadyRequest)_.
+6. _ClientGameManager_ creates another REST API request by running _playerReady (PlayerReadyRequest)_.
    &nbsp;&nbsp;
 
-   [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses userId and gameId from PlayerReadyRequest as parameters in the SQL statement, to update user's subscription status to the topic in the database:
+   [DatabaseManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/db/DatabaseManager.java) uses _userId_ and _gameId_ from _PlayerReadyRequest_ as parameters in the SQL statement, to update user's subscription status to the topic in the database:
    
    ```java
         String sql = "UPDATE user_game SET is_ready = TRUE WHERE user_id = ? AND game_id = ?";
@@ -296,9 +296,9 @@ end
 &nbsp;&nbsp;
 
 
-7. If two different users updated their subscription with the same gameId in DB,  [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame (GameFullData)_.
+7. If two different users updated their subscription with the same _gameId_ in DB,  [ServerGameManager](BoardGames/BoardGamesServer/src/main/java/com/example/boardgamesserver/managers/ServerGameManager.java) runs _startGame (GameFullData)_.
 
-     Therefore, `JMSProducer` created in server. Now the server can interact with the clients by sending messages to topic_{gameId}_{userId}:
+     Therefore, `JMSProducer` created in server. Now the server can interact with the clients by sending messages to *topic_{gameId}_{userId}*:
    
      ```java
         String topicName = "topic" + gameId + "_" + userId;
