@@ -74,43 +74,43 @@ Installation
 
 ► *This application was tested in 1920×1080 display resolution in Windows.* 
 <br><br>
-*******
+
+<hr style="border: 0.1px solid lightgray;">
+<br>
 
 ### Installation Instructions
-
-&nbsp;
-  
+&nbsp;&nbsp;
 #### 1. Set Postgers properties
 - Set password to ___password___
-- Set username to default (___postgres___)
-- Set port to default (___5432___)
+- Set username to ___postgres___ (default)
+- Set port to ___5432___ (default)
 <br><br>
   
 #### 2. Unpack Glassfish to C drive 
 <br>
 
 #### 3. Enable connection to the database
-&nbsp;&nbsp;&nbsp;&nbsp;Copy JDBC driver jar file to c:\glassfish5\glassfish\domains\domain1\lib\
-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Copy JDBC driver jar file to *`c:\glassfish5\glassfish\domains\domain1\lib\`*
+<br><br>
 
 #### 4. Update Glassfish Server Configurations
-&nbsp;&nbsp;&nbsp;&nbsp;Overwrite [domain.xml](domain.xml) to c:\glassfish5\glassfish\domains\domain1\config\
-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Overwrite [domain.xml](domain.xml) to _`c:\glassfish5\glassfish\domains\domain1\config\`_
+<br><br>
 
 #### 5. Import project in InteliJ and build it
-&nbsp;&nbsp;&nbsp;&nbsp;If you have an error "Application Server 'GlassFish 5.0.1' is not configured" in run/debug configurations:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If you have an error _"Application Server 'GlassFish 5.0.1' is not configured"_ in run/debug configurations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;press configure and then add your GlassFish Home directory.<br>
 <br>
 
 #### 6. Deploy server
-- Deploy server from InteliJ by running “ServerApp” run configuration
+- Deploy server from InteliJ by running ___ServerApp___ run configuration
 - Deploy server from cmd (only after it was deployed at least once by IntelliJ):
-    - Run `asadmin start-domain` in your command line from C:\glassfish5\glassfish\bin
-    - Go to `localhost:4848` in your web browser, select Applications and then on "BoardGamesServer-v1" row select "Launch"
+    - Run `asadmin start-domain` in your command line from _`C:\glassfish5\glassfish\bin`_
+    - Go to `localhost:4848` in your web browser, select Applications and then on ___BoardGamesServer-v1___ row select ___Launch___
 <br>
 
 #### 7. Deploy client
-- Deploy client from InteliJ by running “ClientApp” run configuration
+- Deploy client from InteliJ by running ___ClientApp___ run configuration
 - Deploy client from cmd:
   - Build artifact clientJavaFXApp
   - You can use Launch4j to create exe file to run the client:
@@ -119,6 +119,7 @@ Installation
     - Select the settings icon for creating the exe
 <br><br>
 *******
+<br>
 
 Server URL Configuration
 --------------
@@ -130,7 +131,7 @@ Server URL Configuration
  ![image](https://github.com/alice-ruv/board-games/assets/124344785/275570c3-88ac-4e33-838c-d8fe69bf47f3) <br><br>
  As a default, the server URL is set to localhost. Update your server name or address in server URL and press "Save". <br><br>
  You can get your server address by running `ipconfig` in your *command line*. <br>
- If the server and the client are connected to the same WiFi network, get your server address under the section *"Wireless LAN adapter Wifi"* from *"IPv4 Address"*.<br><br>
+ If the server and client are connected to the same Wi-Fi network, retrieve your server's address from the ***IPv4 Address*** field under the ***Wireless LAN adapter Wi-Fi*** section.<br><br>
 
 
 <!--
@@ -141,10 +142,10 @@ Server URL Configuration
      
 -->
 
-&nbsp;&nbsp;
-
+<br>
 
 *******
+<br>
 
 Join Game Documentation
 --------------------------
