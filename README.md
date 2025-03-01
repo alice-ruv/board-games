@@ -1,4 +1,4 @@
-Board Games Server - Battleship & Connect 4
+Board Games App - Battleship & Connect 4
 ===========================================
 
 Board games implementation in **Java** for Battleship and Connect 4, designated for two players with game results tracking.
